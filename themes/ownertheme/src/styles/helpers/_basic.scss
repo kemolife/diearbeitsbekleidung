@@ -1,0 +1,111 @@
+/* very basic styles */
+
+html {
+    font-size: $basic-font-size;
+    font-family: $basic-font-family;
+}
+
+body {
+    font-family: $primary-font;
+}
+
+a {
+    text-decoration: none;
+    color: $cl-dim-gray;
+}
+
+em {
+	font-style: oblique;
+	font-size: .85em;
+}
+
+i, .italic {
+	font-style: italic;
+	font-size: .85em;
+}
+
+u, .underline {
+	text-decoration: underline;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $roboto-b;
+}
+
+h1, .h1 {
+	@include font-size(32px, 2rem);
+}
+
+h2, .h2 {
+	@include font-size(28px, 1.75rem);
+}
+
+h3, .h3 {
+	@include font-size(24px, 1.5rem);
+}
+
+/*
+* Basic classes
+*/
+.container {
+	width: 100%;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	@include media(mobile) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	@include media(mobile-l-up) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.relative {
+    position: relative;
+}
+
+// flex
+.flex {
+	@include flexbox;
+	@include media(phablet-down) {
+		flex-direction: column;
+	}
+	&item {
+		padding: .5rem;
+		@include media(phablet-up) {
+			flex: 1;
+		}
+	}
+}
+
+.is_mobile_hidden {
+    @include media(laptop) {
+        display: none !important;
+    }
+}
+.is_desktop_hidden {
+    @include media(laptop) {
+        display: none !important;
+    }
+    &-2 {
+        @include media(tablet) {
+            display: none !important;
+        }
+    }
+}
+
+
+// defaults
+.default_bg {
+    background: $cl-default-bg;
+}

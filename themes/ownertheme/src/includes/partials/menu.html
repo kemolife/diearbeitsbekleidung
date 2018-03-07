@@ -1,0 +1,45 @@
+<nav class="navbar flex flex-justify">
+	<div class="container">
+		<div class="flex navbar__extend" id="mainMenu">
+			<ul class="nav">
+			@@loop("menu-items.html", [
+				{
+					"name": "About",
+					"url": "#",
+					"active": " active"
+				},
+				{
+					"name": "Service",
+					"url": "#",
+					"active": ""
+				},
+				{
+					"name": "Product",
+					"url": "#",
+					"active": ""
+				},
+				{
+					"name": "News",
+					"url": "#",
+					"active": ""
+				},
+				{
+					"name": "Reviews",
+					"url": "#",
+					"active": ""
+				},
+				{
+					"name": "Contacts",
+					"url": "#",
+					"active": ""
+				}
+			])
+			</ul><!-- .nav -->
+		</div><!-- .navbar-collapse -->
+		<button class="navbar__toggle" id="menuToggle" data-toggle="mainMenu">
+			<span class="navbar__toggle--icon">
+				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+			</span>
+		</button>
+	</div>
+</nav><!-- .navbar -->

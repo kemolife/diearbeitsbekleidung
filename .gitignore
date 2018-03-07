@@ -25,6 +25,8 @@
 #/log/*
 *sitemap.xml
 themes/*/cache/
+themes/*/node_modules/
+themes/*/.tmp/
 #modules/*/config*.xml
 
 # Site content

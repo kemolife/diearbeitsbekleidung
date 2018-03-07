@@ -1,0 +1,41 @@
+/*
+* Buttons
+*/
+
+button {
+    background: $grey;
+}
+
+.btn {
+    @extend .relative;
+    @include display(inline-block, 200px, auto);
+    @include border;
+    @include transition($dur:.3s, $tfunc:ease-in-out);
+    overflow: hidden;
+    padding: 14px 0;
+    text-align: center;
+    background: transparent;
+    &-1 {
+        border-color: #000;
+        &:hover,
+        &:focus {
+            background: #fff;
+            color: #000;
+        }
+        .line {
+            background: #000;
+        }
+    }
+    &-2 {
+        border-color: #fff;
+        color: #fff;
+        &:hover,
+        &:focus {
+            background: #000;
+            color: #fff;
+        }
+        .line {
+            background: #fff;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/*
+* Main navigation styles
+*/
+.navbar {
+	&__extend {
+		@include media(phablet-down) {
+			background-color: $cl-default-primary;
+		}
+	}
+	&__toggle {
+		background: none;
+		@include media(tablet-up) {
+			display: none;
+		}
+		&--icon {
+			background: none;
+		}
+	}
+}
+
+.nav {
+	width: 100%;
+	@include flexbox;
+	@include media(phablet-down) {
+		@include flex-direction;
+	}
+	&__link {
+		@include display;
+		padding: 1rem;
+		@include media(phablet-down) {
+			color: $cl-default-bg-3;
+			text-align: right;
+		}
+	}
+}
+
+
+.mobileMenu {
+	@include transition;
+	@include media(phablet-down) {
+		@include position(fixed, 0px, -101%);
+		width: 50%;
+		height: 100%;
+	}
+	@include media(tablet-up) {
+		width: 100%;
+	}
+	&.is-open {
+		left: -1px;
+		box-shadow: 2px 0px 2px #000;
+	}	
+}

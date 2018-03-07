@@ -1,0 +1,40 @@
+/*
+* Text mixin
+*/
+
+//-------- hide text
+@mixin hide-text {    
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+//-------- text formating
+@mixin text-style($align:center, $transform:uppercase, $decoration:none) {
+    text-align: $align;
+    text-decoration: $decoration;
+    text-transform: $transform;
+}
+
+
+//-------- font size
+@mixin font-size($px, $rem) {
+    font-size: $px;
+    font-size: $rem;
+}
+
+
+//-------- quote 
+@mixin quote($content:"\"") {
+    position: relative;
+    &::before, &::after {
+        position: absolute;
+    }
+    &::before {
+        content: $content;
+        left: -7px;
+    }
+    &::after {
+        content: $content;
+    }
+}

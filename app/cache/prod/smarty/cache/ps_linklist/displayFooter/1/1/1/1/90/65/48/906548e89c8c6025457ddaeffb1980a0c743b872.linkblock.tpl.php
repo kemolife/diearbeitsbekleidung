@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:10369888335a9fbfb64e8db1-51740119%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:150865a9ff4d079e352-51677927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,7 +9,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'module',
     ),
   ),
-  'nocache_hash' => '10369888335a9fbfb64e8db1-51740119',
+  'nocache_hash' => '150865a9ff4d079e352-51677927',
   'variables' => 
   array (
     'linkBlocks' => 0,
@@ -19,14 +19,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a9fbfb6628644_28521843',
+  'unifunc' => 'content_5a9ff4d08b46a7_29156024',
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a9fbfb6628644_28521843')) {function content_5a9fbfb6628644_28521843($_smarty_tpl) {?><div class="col-md-4 links">
+<?php if ($_valid && !is_callable('content_5a9ff4d08b46a7_29156024')) {function content_5a9ff4d08b46a7_29156024($_smarty_tpl) {?><div class="col-md-4 links">
   <div class="row">
       <div class="col-md-6 wrapper">
       <h3 class="h3 hidden-sm-down">Товары</h3>
-            <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_2356" data-toggle="collapse">
+            <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_18842" data-toggle="collapse">
         <span class="h3">Товары</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
@@ -35,12 +35,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </span>
         </span>
       </div>
-      <ul id="footer_sub_menu_2356" class="collapse">
+      <ul id="footer_sub_menu_18842" class="collapse">
                   <li>
             <a
                 id="link-product-page-prices-drop-1"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=prices-drop"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/prices-drop"
                 title="Товары на продажу"
                             >
               Снижение цен
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-product-page-new-products-1"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=new-products"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/new-products"
                 title="Наши новинки"
                             >
               Новые товары
@@ -60,7 +60,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-product-page-best-sales-1"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=best-sales"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/best-sales"
                 title="Наши лидеры продаж"
                             >
               Лидеры продаж
@@ -70,7 +70,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
       <div class="col-md-6 wrapper">
       <h3 class="h3 hidden-sm-down">Наша компания</h3>
-            <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_21421" data-toggle="collapse">
+            <div class="title clearfix hidden-md-up" data-target="#footer_sub_menu_27896" data-toggle="collapse">
         <span class="h3">Наша компания</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
@@ -79,12 +79,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </span>
         </span>
       </div>
-      <ul id="footer_sub_menu_21421" class="collapse">
+      <ul id="footer_sub_menu_27896" class="collapse">
                   <li>
             <a
                 id="link-cms-page-1-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?id_cms=1&amp;controller=cms&amp;id_lang=1"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/content/1-delivery"
                 title="Сроки и условия доставки"
                             >
               Доставка
@@ -94,7 +94,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-cms-page-2-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?id_cms=2&amp;controller=cms&amp;id_lang=1"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/content/2-legal-notice"
                 title="Правовое положениe"
                             >
               Правовое положение
@@ -104,7 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-cms-page-3-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?id_cms=3&amp;controller=cms&amp;id_lang=1"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/content/3-terms-and-conditions-of-use"
                 title="Порядок и условия использования"
                             >
               Порядок и условия использования
@@ -114,7 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-cms-page-4-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?id_cms=4&amp;controller=cms&amp;id_lang=1"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/content/4-about-us"
                 title="Информация о компании"
                             >
               О компании
@@ -124,7 +124,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-cms-page-5-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?id_cms=5&amp;controller=cms&amp;id_lang=1"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/content/5-secure-payment"
                 title="Безопасность платежей"
                             >
               Безопасность платежей
@@ -134,7 +134,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-static-page-contact-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=contact"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/contact-us"
                 title="Для связи с нами используйте контактную форму"
                             >
               Свяжитесь с нами
@@ -144,7 +144,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-static-page-sitemap-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=sitemap"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/карта сайта"
                 title="Потерялись? Используйте поиск"
                             >
               Карта сайта
@@ -154,7 +154,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <a
                 id="link-static-page-stores-2"
                 class="cms-page-link"
-                href="http://diearbeitsbekleidung.local/index.php?controller=stores"
+                href="http://localhost:8080/diearbeitsbekleidung/ru/stores"
                 title=""
                             >
               Магазины
