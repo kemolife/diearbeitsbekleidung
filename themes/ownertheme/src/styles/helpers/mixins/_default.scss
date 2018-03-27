@@ -36,4 +36,7 @@
     &:-ms-placeholder {
         @content;
     }
+    &::-placeholder {
+        @content;
+    }
 }

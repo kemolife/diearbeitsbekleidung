@@ -4,7 +4,6 @@ gulp_install.txt
 bkp/
 .tmp/
 temp/
-src/vendor/
 
 *.js.map
 

@@ -3,27 +3,30 @@
 $max-width: 1140px;
 
 // breakpoints
-$width-1: 	400px; // 380 + padding-left:10px + padding-right:10px;
-$width-2: 	750px; // 720 + padding-left:15px + padding-right:15px;
-$width-3: 	994px; // 964
-$width-4: 	1200px; // 1170
-$width-5: 	1600px;
-$width-6: 	1920px;
+$width-1600: 	1600px;
+$width-1920: 	1920px;
+
+/* Path */
+$font:	"../fonts";
+$img:	"../img";
+$img-bg: "/img/bg";
 
 
 /* fonts */
 //@include font-face-1("fontello", "../fonts/fontello");
-@include font-face-1("Roboto-Regular", "../fonts/Roboto-Regular");
-@include font-face-1("Roboto-Bold", "../fonts/Roboto-Bold");
-@include font-face-1("Roboto-Light", "../fonts/Roboto-Light");
+@include font-face-1("FiraSans-Regular", "#{$font}/FiraSans-Regular");
+@include font-face-1("FiraSans-Medium", "#{$font}/FiraSans-Medium");
+@include font-face-1("Oswald-Regular", "#{$font}/Oswald-Regular");
+@include font-face-1("Oswald-SemiBold", "#{$font}/Oswald-SemiBold");
 
 
-$basic-font-family:	"arial", sans-serif;
-$basic-font-size: 16px;
+$base-font-family:	"arial", sans-serif;
+$base-font-size: 16px;
 
-$roboto-r:		"Roboto-Regular";
-$roboto-b:		"Roboto-Bold";
-$roboto-l:		"Roboto-Light";
+$fira-r:	'FiraSans-Regular';
+$fira-m:	'FiraSans-Medium';
+$oswald-r:	'Oswald-Regular';
+$oswald-sb: 'Oswald-SemiBold';
 
 
-$primary-font: $roboto-r;
+$primary-font: $fira-r;

@@ -2,6 +2,23 @@
 * Text mixin
 */
 
+//-------- calculate rem
+@function calcRem($pxSize) {
+	$remSize: $pxSize / $base-font-size;
+	@return #{$remSize}rem;
+}
+//-------- most used font-size / line-height
+@mixin font-size-height($px:$font-size, $lh:1.125em) {
+    font-size: $px;
+    font-size: calcRem($px);
+    line-height: $lh;
+}
+//-------- only font-size
+@mixin font-size($px:$font-size) {
+    font-size: $px;
+    font-size: calcRem($px);
+}
+
 //-------- hide text
 @mixin hide-text {    
     text-indent: 100%;
@@ -15,14 +32,6 @@
     text-decoration: $decoration;
     text-transform: $transform;
 }
-
-
-//-------- font size
-@mixin font-size($px, $rem) {
-    font-size: $px;
-    font-size: $rem;
-}
-
 
 //-------- quote 
 @mixin quote($content:"\"") {

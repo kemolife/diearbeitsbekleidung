@@ -34,7 +34,7 @@ let src     = './src',
     dist    = './assets',
     tmp		= './.tmp',
     srvDir	= tmp,
-    node    = './node_modules',
+    //node    = './node_modules',
     pathSrc = {
         html:       src + '/index.html',
         scss:       src + '/styles/main.scss',
@@ -155,7 +155,7 @@ bm.on('update', bundleMain);
 bm.on('log', gutil.log);
 
 
-gulp.task('templates', function() {
+/*gulp.task('templates', function() {
 	return gulp.src(src + '/templates/*.hbs')
 		.pipe(handlebars({
 			handlebars: require('handlebars')
@@ -168,7 +168,7 @@ gulp.task('templates', function() {
 		.pipe(concat('templates.js'))
 		.pipe(wrap('var Handlebars = require("handlebars");\n <%= contents %>'))
 		.pipe(gulp.dest(src + '/js/'));
-});
+});*/
 
 
 gulp.task('images', function() {
@@ -221,8 +221,8 @@ gulp.task('clean', function() {
     return del.sync(srvDir);
 });
 
-
-let builds = ['templates', 'clean', 'html', 'scss', 'jsVendor', 'jsMain', 'fonts', 'fontVendor', 'images', 'json'];
+// removed 'templates'
+let builds = ['clean', 'html', 'scss', 'jsVendor', 'jsMain', 'fonts', 'fontVendor', 'images', 'json'];
 
 gulp.task('watch', builds, function() {
     gulp.watch(pathWatch.html, ['html']);
@@ -232,8 +232,16 @@ gulp.task('watch', builds, function() {
     gulp.watch(src + '/*.json', ['json']);
 });
 
+gulp.task('build', builds, function() {
+    gulp.watch(pathWatch.html, ['html']);
+    gulp.watch(pathWatch.scss, ['scss']);
+    gulp.watch(pathSrc.jsVendor, ['jsVendor']);
+    gulp.watch(pathWatch.js, ['jsMain']);
+    gulp.watch(src + '/*.json', ['json']);
+});
 
-gulp.task('build', builds);
+/*
+gulp.task('build', builds);*/
 
 
 gulp.task('default', [defaultTask, 'webserver']);

@@ -1,0 +1,48 @@
+/*
+* Main navigation styles
+*/
+.navbar {
+	padding: 0;
+	&__extend {
+		@include media-breakpoint-down(sm) {
+			background-color: $cl_theme-black;
+		}
+	}
+	&-toggler {
+		@include display($w:40px, $h:40px);
+		position: relative;
+		padding: .25rem;
+		background: none;
+		&-icon {
+			background: none;
+		}
+		&-line {
+			@include display($h:2px);
+			@include position($top:10px);
+			background: $cl_theme-black;
+			&:nth-child(2) {
+				top: 18px;
+			}
+			&:nth-child(3) {
+				top: 26px;
+			}
+		}
+	}
+}
+
+.nav {
+	width: 100%;
+	@include flexbox;
+	@include media-breakpoint-down(sm) {
+		@include flex-direction;
+	}
+	&__link {
+		@include display;
+		padding: 1rem;
+		font-family: $oswald-sb;
+		@include media-breakpoint-down(sm) {
+			color: gray;
+			text-align: right;
+		}
+	}
+}

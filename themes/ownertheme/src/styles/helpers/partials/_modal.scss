@@ -4,18 +4,7 @@
     padding: 0 20px;
     z-index: 9999;
     background-color: rgba(0,0,0,0.8);
-    &__body {
-        @include width-height(90%, auto);
-        @include position(absolute, 50%, 50%);
-        @include translate;
-        background-color: #fff;
-        @include media(pahblet-up) {
-            width: 768px;
-        }
-    }
-    &__header {
-        
-    }
+	
     &__container {
         
     }

@@ -1,0 +1,28 @@
+.header {
+	&__mobile {
+		@include media-breakpoint-up(xl) {
+			display: none !important;
+		}
+		.desktop & {
+			display: none !important;
+		}
+		.row:first-child {
+			border-bottom: 1px solid rgba($cl_theme-dark, .25);
+		}
+	}
+	&__desktop {
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+		.mobile & {
+			display: none !important;
+		}
+	}
+	&__logo {
+		margin: 0;
+		margin-top: 2px;
+		text-align: center;
+	}
+	&__account {}
+	&__cart {}
+}

@@ -2,22 +2,16 @@
 * Default color theme
 */
 
-$cl-default-primary:    #2E5273;
-$cl-default-bg:         #FFEFD8;
-$cl-default-bg-3:       #DBEEFF;
-$cl-default-text:       #000000;
-$cl-default-secondary:  #27666C;
-$cl-default-sc-bg:      #B2753F;
+$cl_theme-black:	#000;
+$cl_theme-dark:		#363636;
+$cl_theme-dark-2:	#282828;
+$cl_theme-orange:	#ff6600;
+$cl_brand:			$cl_theme-orange;
+$cl_theme-red:		#b22721;
+$cl_theme-blue:		#308bb6;
+$cl_theme-green:	#b22721;
 
-$primary_color:			$cl-default-primary;
 
-
-$grey:          #999;
-
-$cl-platinum:   #ebebeb;
-$cl-dim-gray:   #616161;
-$cl-404:        #d5d5d5;
-
-$dark_blue:     #021A29;
-
-$default_bg:    lighten($dark_blue, 85%);
+$cl-facebook: 	#3b5998;
+$cl-whatsapp: 	#075e54;
+$cl-google: 	#dd4b39;

@@ -2,7 +2,8 @@
 /*
 * Vendors
 */
-@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/@mdi/font/scss/materialdesignicons";
+/*  */
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 /*
@@ -12,7 +13,7 @@
 @import "helpers/variables";
 @import "helpers/color_theme";
 @import "helpers/mixins";
-@import "helpers/default";
+@import "helpers/custom";
 
 /*
 * App

@@ -7,31 +7,31 @@
         @include display(inline-block, 50px, 50px);
         margin: 0 10px;
         text-align: center;
-        @include media(phablet-up) {
+        @include media-breakpoint-up(md) {
             @include width-height(25px, 25px);
         }
         a, span {
             @include display;
-            color: $grey;
+            color: grey;
             line-height: 50px;
-            @include media(phablet-down) {
+            @include media-breakpoint-down(sm) {
                 font-size: 20px;
                 font-size: 1.25rem;
             }
-            @include media(phablet-up) {
+            @include media-breakpoint-up(md) {
                 line-height: 25px;
             }
         }
         &.is-active {
-            background: $primary_color;
+            background: black;
             a, span {
                 color: #fff;
             }
         }
         &.prev, &.next {
             a, span {
-                color: $primary_color;
-                @include media(phablet-down) {
+                color: black;
+                @include media-breakpoint-down(sm) {
                     font-size: 26px;
                     font-size: 1.615rem;
                 }
