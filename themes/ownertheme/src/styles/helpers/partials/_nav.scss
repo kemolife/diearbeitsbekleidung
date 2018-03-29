@@ -1,11 +1,26 @@
 /*
 * Main navigation styles
 */
+$nav-top: 85px;
 .navbar {
+	@include width-height($w:0, $h:calc(100% - #{$nav-top}));
 	padding: 0;
-	&__extend {
-		@include media-breakpoint-down(sm) {
-			background-color: $cl_theme-black;
+	@include transition;
+	overflow-y: auto;
+	@include media-breakpoint-down(lg) {
+		@include position($top:$nav-top, $left:100%);
+		align-items: flex-start;
+		background-color: $cl_theme-dark;
+	}
+	.container {
+		@include transition;
+		opacity: 0;
+	}
+	&__extended {
+		width: 100%;
+		left: 0;
+		.container {
+			opacity: 1;
 		}
 	}
 	&-toggler {
@@ -19,6 +34,8 @@
 		&-line {
 			@include display($h:2px);
 			@include position($top:10px);
+			@include transition;
+			opacity: 1;
 			background: $cl_theme-black;
 			&:nth-child(2) {
 				top: 18px;
@@ -28,21 +45,95 @@
 			}
 		}
 	}
+	&-close {
+		.navbar-toggler-line {
+			&:nth-child(1) {
+				top: 17.5px;
+				transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+				transform: rotate(135deg);
+			}
+			&:nth-child(3) {
+				opacity: 0;
+			}
+		}
+	}
 }
 
 .nav {
 	width: 100%;
-	@include flexbox;
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		@include flex-direction;
 	}
-	&__link {
+	&-item,
+	.dropdown-item {
+		&:not(:last-child) {
+			@include media-breakpoint-down(lg) {
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+			}
+		}
+	}
+	&-item {
+		@include media-breakpoint-down(lg) {
+			border-color: white;
+			text-align: left;
+		}
+		&:last-child {
+			.nav-link {
+				color: $cl_brand;
+			}
+		}
+	}
+	.dropdown-item {
+		@include media-breakpoint-down(lg) {
+			border-color: $cl_theme-dark;
+		}
+	}
+	&-link,
+	.dropdown-item {
 		@include display;
-		padding: 1rem;
+		padding: .125rem 0;
 		font-family: $oswald-sb;
-		@include media-breakpoint-down(sm) {
-			color: gray;
-			text-align: right;
+		text-transform: uppercase;
+	}
+	&-link {
+		color: white;
+		&:hover,
+		&:active {
+			@include media-breakpoint-down(lg) {
+				color: white;
+			}
+		}
+	}
+	.dropdown {
+		&-menu {
+			border-radius: 0;
+			@include media-breakpoint-down(lg) {
+				position: inherit;
+				width: 100%;
+				padding: 0;
+				padding-left: 2.5rem;
+			}
+			&::after {
+				@include pseudo-elm($w:100vw, $h:calc(100% + 2px));
+				@include position($left:50%);
+				@include translateX;
+				z-index: 1;
+				background: white;
+			}
+		}
+		&-item {
+			position: relative;
+			z-index: 2;
+			/*@include media-breakpoint-down(lg) {}*/
+			&:hover,
+			&:active {
+				@include media-breakpoint-down(lg) {
+					color: inherit;
+				}
+			}
 		}
 	}
 }

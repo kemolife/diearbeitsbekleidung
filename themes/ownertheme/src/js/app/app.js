@@ -4,8 +4,35 @@
     
     'use strict';
 	
+	let app = {
+		navClass:		'.navbar',
+		navExtended:	'navbar__extended',
+		navToggler:		'.navbar-toggler',
+		navClose:		'navbar-close'
+	};
+	
+	/*$(app.navToggler).toggle(function() {
+		$(app.navClass).addClass(app.navExtended);
+		$(this).closest('.col-4').siblings('.col-4').fadeOut();
+		$(this).addClass(app.navClose);
+	}, function() {
+		$(app.navClass).removeClass(app.navExtended);
+		$(this).closest('.col-4').siblings('.col-4').fadeIn();
+		$(this).removeClass(app.navClose);
+	});*/
+	
+	$(app.navToggler).on('click', function() {
+		$(app.navClass).toggleClass(app.navExtended);
+		$(this).closest('.col-4').siblings('.col-4').fadeToggle();
+		$(this).toggleClass(app.navClose);
+		$('body').toggleClass('overflow-y');
+	});
+	/*$('.'+app.navClose).on('click', function() {
+		$(this).removeClass(app.navClose).closest('.col-4').siblings('.col-4').fadeIn();
+	});*/
+	
 	// inject telesyk copyright
-	function AwesomeClass(name, src) {
+	/*function AwesomeClass(name, src) {
 		this.name = name;
 		this.src = src;
 		this.htmlPage = document.body;
@@ -24,6 +51,6 @@
 		}
 	}
 	const telesykIam = new AwesomeClass('telesyk', 'github.com/');
-	telesykIam.scriptProtection();
+	telesykIam.scriptProtection();*/
 	
 })(console.log('app.js loaded'));

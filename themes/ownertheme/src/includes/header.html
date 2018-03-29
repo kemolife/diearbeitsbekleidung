@@ -33,24 +33,28 @@
     				<img src="img/logo-mob.png" alt="mobile logo">
     			</figure>
     		</div>
-    		<div class="col-4 d-flex justify-content-end align-items-center">
+    		<div class="col-4 justify-content-end align-items-center">
     			<div class="header__account">
     				<button class="header__account--btn">
     					<i class="mdi mdi-account" aria-hidden="true"></i>
     				</button>
     			</div>
-    			<div class="header__cart">
+    			<div class="header__cart not-empty">
     				<button class="header__cart--btn">
     					<i class="mdi mdi-cart" aria-hidden="true"></i>
     				</button>
-    			</div>
+    				<span class="header__cart--counter">2</span>
+    			</div><!-- add class .not-empty when user choose product -->
     		</div>
     	</div>
     	<form class="header__search">
     		<input type="search" class="form-control" placeholder="Search" aria-label="Search">
+    		<button class="header__search--btn">
+				<i class="mdi mdi-magnify" aria-hidden="true"></i>
+			</button>
     	</form>
-    </div><!-- .header__mobile -->
-    <div class="container header__desktop"></div><!-- .header__desktop -->
+    </div><!-- .header__mobile only for mobile devices -->
+    <div class="container header__desktop"></div><!-- .header__desktop only for laptop|desktop|big monitors -->
 </header><!-- #header -->
 <!-- nav block -->
-<!--@@include("partials/menu.html")-->
+@@include("partials/nav.html")

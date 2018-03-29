@@ -1,11 +1,25 @@
 /* very basic styles */
-
-html {
-    font-size: $base-font-size;
+body {
+	overflow-x: hidden;
+    font-family: $primary-font;
 }
 
-body {
-    font-family: $primary-font;
+button {
+    background: inherit;
+	border: none;
+}
+
+textarea, input,
+a, button {
+	outline: none;
+	box-shadow: none;
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0 !important;
+		box-shadow: none !important;
+		-webkit-appearance: none !important;
+	}
 }
 
 a {
@@ -53,6 +67,15 @@ h3, .h3 {
 /*
 * Basic classes
 */
+
+.page {
+	@include width-height;
+	overflow-x: hidden;
+}
+
+.overflow-y {
+	overflow-y: hidden;
+}
 
 .relative {
     position: relative;

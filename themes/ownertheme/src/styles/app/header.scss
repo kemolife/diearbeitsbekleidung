@@ -24,5 +24,41 @@
 		text-align: center;
 	}
 	&__account {}
-	&__cart {}
+	&__cart {
+		position: relative;
+		&--counter {
+			$counter-size: 16px;
+			@include display($w:$counter-size, $h:$counter-size);
+			@include position($top:2px, $left:60%);
+			@include font-size-height($counter-size / 1.25, 1.25);
+			font-family: $oswald-r;
+			text-align: center;
+			border: 1px solid $cl_brand;
+			border-radius: 50%;
+			background: white;
+		}
+	}
+	&__search {
+		position: relative;
+		.form-control {
+			@include media-breakpoint-down(lg) {
+				margin: 4px 0;
+				padding: .125rem .5rem;
+			}
+		}
+		&--btn {
+			@include width-height($w:40px);
+			@include position($left:auto, $right:0);
+			z-index: 2;
+			.mdi {
+				line-height: 1.25;
+			}
+		}
+	}
+	.col-4:last-child {
+		display: flex;
+	}
+	.mdi {
+		font-size: 150%;
+	}
 }
