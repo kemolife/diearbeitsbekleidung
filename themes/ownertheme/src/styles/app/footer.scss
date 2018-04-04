@@ -1,0 +1,94 @@
+.footer {
+	&__top {
+		color: white;
+		
+	}
+	&__logo {
+		@include media-breakpoint-down(md) {
+			padding-top: 1rem;
+			text-align: center;
+		}
+	}
+	&__media {
+		&--item {
+			color: white;
+			@include media-breakpoint-down(md) {
+				margin: 0 .75rem;
+				@include font-size(36px);
+			}
+			@include media-breakpoint-up(lg) {
+				margin: 0 .5rem;
+				@include font-size(22px);
+			}
+		}
+	}
+	&__nav {
+		margin-bottom: .75rem;
+	}
+	&__payment-delivery {
+		h6, .h6 {
+			margin-bottom: .125rem;
+		}
+	}
+	&__payment,
+	&__delivery {
+		width: 44px;
+		height: 23px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-image: url("../img/payment-delivery.png");
+	}
+	&__payment {
+		background-size: 300%;
+	}
+	&__delivery {
+		background-size: 305%;
+	}
+	&__payment {
+		&.payment1 {
+			background-position: 0 93%;
+		}
+		&.payment2 {
+			background-position: 49% 93%;
+		}
+		&.payment3 {
+			background-position: 98% 93%;
+		}
+	}
+	&__delivery {
+		&.delivery1 {
+			background-position: 1% 4%;
+		}
+		&.delivery2 {
+			background-position: 49% 4%;
+		}
+		&.delivery3 {
+			background-position: 97% 4%;
+		}
+	}
+	&__contacts {
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+		&--item {
+			font-family: $oswald-r;
+			@include media-breakpoint-down(md) {
+				padding: 0 3em;
+			}
+		}
+		span, a {
+			color: white;
+			@include media-breakpoint-down(md) {
+				@include font-size(14px);
+			}
+		}
+		.mdi {
+			margin-right: .5rem;
+			@include font-size(22px);
+		}
+	}
+	&__bottom {
+		padding: 1px 0;
+		@include font-size(12px);
+		font-family: $oswald-r;
+	}
+}

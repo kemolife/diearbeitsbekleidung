@@ -1,7 +1,115 @@
 <footer id="footer" class="footer">
-    <div class="container">
-    	<p>Footer <i class="fa fa-2x fa-copyright" aria-hidden="true"></i></p>
-    </div>
+	<div class="footer__top bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<figure class="footer__logo">
+						<img src="img/logo-2.png" alt="footer logo">
+					</figure>
+					<div class="footer__media d-flex justify-content-center">
+						<a href="" class="footer__media--item">
+							<i class="mdi mdi-facebook"></i>
+						</a>
+						<a href="" class="footer__media--item">
+							<i class="mdi mdi-google-plus"></i>
+						</a>
+						<a href="" class="footer__media--item">
+							<i class="mdi mdi-linkedin"></i>
+						</a>
+						<a href="" class="footer__media--item">
+							<i class="mdi mdi-twitter"></i>
+						</a>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 footer__nav">
+					<nav class="nav">
+						@@loop("partials/nav-footer.html", [{
+							"navLink": "uber-uns.html",
+							"navTitle": "Über uns"
+						},{
+							"navLink": "versand.html",
+							"navTitle": "Versand und Zahlung"
+						},{
+							"navLink": "blog.html",
+							"navTitle": "Blog"
+						},{
+							"navLink": "kontakt.html",
+							"navTitle": "Karriere"
+						},{
+							"navLink": "kontakt.html",
+							"navTitle": "Kontakt"
+						}])
+					</nav>
+				</div>
+				<div class="col-6 col-lg-2 footer__nav">
+					<nav class="nav">
+						@@loop("partials/nav-footer.html", [{
+							"navLink": "kategorien.html",
+							"navTitle": "ARBEITSKLEIDUNG"
+						},{
+							"navLink": "kategorien.html",
+							"navTitle": "SICHERHEITSSCHUHE"
+						},{
+							"navLink": "kategorien.html",
+							"navTitle": "ARBEITSSCHUHE"
+						},{
+							"navLink": "kategorien.html",
+							"navTitle": "ARBEITSHANDSCHUHE"
+						},{
+							"navLink": "kategorien.html",
+							"navTitle": "ARBEITSKLEIDUNG MIT LOGO"
+						}])
+					</nav>
+				</div>
+				<div class="col-lg-2 footer__payment-delivery">
+					<div class="row">
+						<div class="col-6 col-lg-12">
+							<div class="h6">Zahlung</div>
+							<div class="d-flex">
+								<div class="footer__payment payment1"></div>
+								<div class="footer__payment payment2"></div>
+								<div class="footer__payment payment3"></div>
+							</div>
+						</div>
+						<div class="col-6 col-lg-12">
+							<div class="h6">Versandinfo</div>
+							<div class="d-flex">
+								<div class="footer__delivery delivery1"></div>
+								<div class="footer__delivery delivery2"></div>
+								<div class="footer__delivery delivery3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 footer__contacts">
+					<div class="footer__contacts--item d-flex align-items-center phone">
+						<i class="mdi mdi-phone"></i>
+						<a href="tel:+4944155979565" title="tel">+49(441)55-979-565</a>
+					</div>
+					<div class="footer__contacts--item d-flex align-items-center mail">
+						<i class="mdi mdi-email"></i>
+						<a href="mailto:info@kermen.eu" title="mail">info@kermen.eu</a>
+					</div>
+					<div class="footer__contacts--item d-flex align-items-center location">
+						<i class="mdi mdi-map-marker"></i>
+						<span>im Kleigrund 5, 26135 Oldenburg</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom bg-dark-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<span>&copy; diearbeitsbekleidung, 2018</span>
+				</div>
+				<div class="col-6 text-right">
+					<span>Developed by </span><a href="https://onweb.com.ua/">OnWeb</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 </div>

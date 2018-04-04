@@ -45,11 +45,14 @@ b, strong {
 
 h1, .h1,
 h2, .h2,
-h3, .h3,
+h3, .h3 {
+	font-family: $oswald-sb;
+}
+
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-	font-family: $oswald-sb;
+	font-family: $oswald-r;
 }
 
 h1, .h1 {
@@ -79,6 +82,17 @@ h3, .h3 {
 
 .relative {
     position: relative;
+}
+
+.bg {
+	&-dark {
+		background-color: $cl_theme-dark;
+		color: white;
+	}
+	&-dark-2 {
+		background-color: $cl_theme-dark-2;
+		color: white;
+	}
 }
 
 $hide_up: md lg xl;

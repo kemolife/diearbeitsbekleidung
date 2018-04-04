@@ -8,7 +8,7 @@ $nav-top: 85px;
 	@include transition;
 	overflow-y: auto;
 	@include media-breakpoint-down(lg) {
-		@include position($top:$nav-top, $left:100%);
+		@include position($top:$nav-top, $left:-100%);
 		align-items: flex-start;
 		background-color: $cl_theme-dark;
 	}
@@ -95,17 +95,38 @@ $nav-top: 85px;
 	.dropdown-item {
 		@include display;
 		padding: .125rem 0;
-		font-family: $oswald-sb;
-		text-transform: uppercase;
+		.header & {
+			font-family: $oswald-sb;
+			text-transform: uppercase;
+		}
 	}
 	&-link {
 		color: white;
+		.footer & {
+			@include font-size(14px);
+			font-family: $oswald-r;
+		}
 		&:hover,
 		&:active {
 			@include media-breakpoint-down(lg) {
 				color: white;
 			}
 		}
+		&::after {
+			display: none;
+		}
+	}
+	.mdi {
+		@include position($left:auto, $right:0);
+		@include transition;
+		@include font-size-height(26px, 1.125);
+		color: white;
+		@include media-breakpoint-up(xl) {
+			display: none;
+		}
+	}
+	.show .mdi {
+		transform: rotate(180deg);
 	}
 	.dropdown {
 		&-menu {
