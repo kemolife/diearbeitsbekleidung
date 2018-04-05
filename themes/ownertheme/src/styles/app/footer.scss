@@ -1,16 +1,42 @@
 .footer {
 	&__top {
 		color: white;
-		
+		@include media-breakpoint-up(lg) {
+			padding: .25rem 0;
+		}
 	}
 	&__logo {
 		@include media-breakpoint-down(md) {
 			padding-top: 1rem;
 			text-align: center;
 		}
+		@include media-breakpoint-up(lg) {
+			max-width: 120px;
+			margin: .75rem 0 .5rem;
+		}
+		img {
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+			}
+		}
+	}
+	.mdi {
+		color: white;
+		@include media-breakpoint-down(md) {
+			margin: 0 .75rem;
+			@include font-size(36px);
+		}
+		@include media-breakpoint-up(lg) {
+			margin: 0 .25rem;
+			@include font-size(20px);
+		}
+		
 	}
 	&__media {
-		&--item {
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		}
+		/*&--item {
 			color: white;
 			@include media-breakpoint-down(md) {
 				margin: 0 .75rem;
@@ -18,61 +44,132 @@
 			}
 			@include media-breakpoint-up(lg) {
 				margin: 0 .5rem;
-				@include font-size(22px);
+				@include font-size(20px);
+			}
+		}*/
+	}
+	&__nav {
+		@include media-breakpoint-down(md) {
+			margin-bottom: .75rem;
+		}
+		&:nth-child(2) {
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 18%;
+				max-width: 18%;
+			}
+		}
+		&:nth-child(3) {
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 22%;
+				max-width: 22%;
 			}
 		}
 	}
-	&__nav {
-		margin-bottom: .75rem;
+	.nav {
+		@include media-breakpoint-up(lg) {
+			padding-left: 1rem;
+			position: relative;
+		}
+		&::after {
+			@include media-breakpoint-up(lg) {
+				@include pseudo-elm($w:1px, $h:90%);
+				@include position($top:51%);
+				@include translateY;
+				background: white;
+			}
+		}
+	}
+	.nav-link {
+		&:active,
+		&:hover {
+			color: white;
+			text-decoration: underline;
+		}
 	}
 	&__payment-delivery {
 		h6, .h6 {
-			margin-bottom: .125rem;
+			margin-bottom: .25rem;
+		}
+		.payment,
+		.delivery {
+			width: 44px;
+			height: 23px;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-image: url("../img/payment-delivery.png");
+		}
+		.payment {
+			background-size: 300%;
+		}
+		.delivery {
+			background-size: 305%;
 		}
 	}
 	&__payment,
 	&__delivery {
-		width: 44px;
-		height: 23px;
-		overflow: hidden;
-		background-repeat: no-repeat;
-		background-image: url("../img/payment-delivery.png");
+		@include media-breakpoint-up(lg) {
+			padding: .5rem 0;
+			padding-left: 1rem;
+			position: relative;
+		}
+		&::after {
+			@include media-breakpoint-up(lg) {
+				@include pseudo-elm($w:1px, $h:70%);
+				@include position($top:52%);
+				@include translateY;
+				background: white;
+			}
+		}
 	}
 	&__payment {
-		background-size: 300%;
-	}
-	&__delivery {
-		background-size: 305%;
-	}
-	&__payment {
-		&.payment1 {
+		.payment1 {
 			background-position: 0 93%;
 		}
-		&.payment2 {
+		.payment2 {
 			background-position: 49% 93%;
 		}
-		&.payment3 {
+		.payment3 {
 			background-position: 98% 93%;
 		}
 	}
 	&__delivery {
-		&.delivery1 {
+		.delivery1 {
 			background-position: 1% 4%;
 		}
-		&.delivery2 {
+		.delivery2 {
 			background-position: 49% 4%;
 		}
-		&.delivery3 {
+		.delivery3 {
 			background-position: 97% 4%;
 		}
 	}
 	&__contacts {
 		padding-top: .75rem;
 		padding-bottom: .75rem;
+		@include media-breakpoint-between(sm, md) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: .5rem;
+			position: relative;
+		}
+		&::after {
+			@include media-breakpoint-up(lg) {
+				@include pseudo-elm($w:1px, $h:75%);
+				@include position($top:52%);
+				@include translateY;
+				background: white;
+			}
+		}
 		&--item {
 			font-family: $oswald-r;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(xs) {
 				padding: 0 3em;
+			}
+			@include media-breakpoint-between(sm, md) {
+				width: 50%;
 			}
 		}
 		span, a {
@@ -83,12 +180,15 @@
 		}
 		.mdi {
 			margin-right: .5rem;
-			@include font-size(22px);
+			/*@include font-size(22px);*/
 		}
 	}
 	&__bottom {
-		padding: 1px 0;
+		padding: 2px 0;
 		@include font-size(12px);
 		font-family: $oswald-r;
+		span, a {
+			color: white;
+		}
 	}
 }

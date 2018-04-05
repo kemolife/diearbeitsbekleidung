@@ -94,6 +94,7 @@ $nav-top: 85px;
 	&-link,
 	.dropdown-item {
 		@include display;
+		@include transition;
 		padding: .125rem 0;
 		.header & {
 			font-family: $oswald-sb;
