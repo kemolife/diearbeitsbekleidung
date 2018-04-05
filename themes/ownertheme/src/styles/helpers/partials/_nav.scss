@@ -3,14 +3,14 @@
 */
 $nav-top: 85px;
 .navbar {
-	@include width-height($w:0, $h:calc(100% - #{$nav-top}));
 	padding: 0;
 	@include transition;
 	overflow-y: auto;
+	background-color: $cl_theme-dark;
 	@include media-breakpoint-down(lg) {
+		@include width-height($w:0, $h:calc(100vh - #{$nav-top}));
 		@include position($top:$nav-top, $left:-100%);
 		align-items: flex-start;
-		background-color: $cl_theme-dark;
 	}
 	.container {
 		@include transition;

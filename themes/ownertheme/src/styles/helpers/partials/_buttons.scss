@@ -1,20 +1,33 @@
 /*
 * Buttons
 */
-
 button {
     background: transparent;
 }
 
 .btn {
     @extend .relative;
-    @include display(inline-block, 200px, auto);
+    @include display(inline-block, auto, auto);
     @include border;
     @include transition($dur:.3s, $tfunc:ease-in-out);
     overflow: hidden;
-    padding: 14px 0;
-    text-align: center;
     background: transparent;
+	font-size: inherit;
+    text-align: center;
+	&-info,
+	&-primary,
+	&-1,
+	&-2 {
+		width: 200px;
+    	padding: 14px 0;
+	}
+	&-post-more {
+		padding: 0;
+		width: 100%;
+		text-align: right;
+		color: $cl_theme-black;
+		text-decoration: underline;
+	}
     &-1 {
         border-color: #000;
         &:hover,

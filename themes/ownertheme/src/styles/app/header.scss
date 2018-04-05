@@ -1,4 +1,6 @@
 .header {
+	position: relative;
+	z-index: $zindex-dropdown;
 	&__mobile {
 		@include media-breakpoint-up(xl) {
 			display: none !important;
