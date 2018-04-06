@@ -1,0 +1,76 @@
+.section__print-logo {
+	.section__front {
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 50px;
+		}
+	}
+	&--item {
+		position: relative;
+		@include media-breakpoint-down(md) {
+			height: 158px;
+		}
+		@include media-breakpoint-down(sm) {
+			margin: .75rem 0;
+		}
+		@include media-breakpoint-up(lg) {
+			height: 248px;
+		}
+		&:hover,
+		&:active {
+			.section__print-logo--img {
+				@include media-breakpoint-down(md) {
+					box-shadow: 0px 0px 8px $cl_theme-black;
+				}
+				@include media-breakpoint-up(lg) {
+					box-shadow: 0px 0px 30px -5px $cl_theme-black;
+				}
+			}
+		}
+	}
+	&--img {
+		height: 100%;
+		overflow: hidden;
+		margin: 0;
+		@include transition;
+		img {
+			display: block;
+			@include media-breakpoint-down(sm) {
+				@include size(auto, 100%);
+			}
+			@include media-breakpoint-up(md) {
+				@include size(100%, auto);
+			}
+		}
+	}
+	&--title {
+		@include display($w:calc(100% - 20px));
+		@include position($left:10px);
+		@include transition;
+		font-family: $oswald-sb;
+		color: white;
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 1rem 0 2rem;
+		}
+		&:hover,
+		&:active {
+			color: white;
+		}
+		span {
+			@include display($h:auto);
+			@include media-breakpoint-down(sm) {
+				padding: .125rem 0 .5rem;
+				background: $cl_brand;
+				@include font-size(19px);
+			}
+			@include media-breakpoint-up(md) {
+				@include font-size(26px);
+			}
+		}
+	}
+}
