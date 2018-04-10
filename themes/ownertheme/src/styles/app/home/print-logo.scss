@@ -34,12 +34,7 @@
 		@include transition;
 		img {
 			display: block;
-			@include media-breakpoint-down(sm) {
-				@include size(auto, 100%);
-			}
-			@include media-breakpoint-up(md) {
-				@include size(100%, auto);
-			}
+			@include size(100%, auto);
 		}
 	}
 	&--title {
