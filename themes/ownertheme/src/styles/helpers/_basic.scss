@@ -145,6 +145,13 @@ $hide_down: sm md lg;
 	}
 }
 
+.container {
+	@include media-breakpoint-up(xl) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
 .post {
 	padding-bottom: .5rem;
 	line-height: 1.125;
@@ -171,5 +178,33 @@ img.float {
 	}
 	&-right {
 		margin-left: 1rem;
+	}
+}
+
+.slick {
+	&-slider {
+		position: relative;
+	}
+	&-list {
+		overflow: hidden;
+	}
+	&-track {
+		display: flex;
+	}
+	&-arrow {
+		@include position($top:50%);
+		@include translateY;
+		@include transition;
+		@include font-size(60px);
+		color: $cl_brand;
+		z-index: 99;
+		cursor: pointer;
+		&.slick-prev {
+			left: -20px;
+		}
+		&.slick-next {
+			left: auto;
+			right: -20px;
+		}
 	}
 }

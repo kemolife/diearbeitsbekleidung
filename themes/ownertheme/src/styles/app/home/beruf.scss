@@ -15,21 +15,12 @@
 	&--list {
 		.slick {
 			&-list {
-				max-width: 1140px;
+				max-width: 1170px;
+				margin: 0 auto;
 				padding: 1rem 0;
 				overflow: hidden;
 			}
-			&-track {
-				display: flex;
-			}
 			&-arrow {
-				@include position($top:50%);
-				@include translateY;
-				@include transition;
-				@include font-size(60px);
-				color: $cl_brand;
-				z-index: 99;
-				cursor: pointer;
 				opacity: 0.15;
 				&.slick-prev {
 					left: -40px;
@@ -53,8 +44,12 @@
 	}
 	&--item {
 		position: relative;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
 		@include media-breakpoint-up(xl) {
 			@include size(380px, 250px);
+			margin: 0 4.75px;
 		}
 	}
 	&--content {
