@@ -1,1 +1,44 @@
-.section__search {}
+.section__search {
+	.section__back {
+		background-image: url("#{$img-bg}/bg-seo.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.section__front {
+		@include media-breakpoint-up(xl) {
+			padding-bottom: 1.875rem;
+		}
+	}
+	select.form-control {
+		height: 30px;
+		border: none;
+		border-radius: 0;
+		border-bottom: 1px solid $cl_theme-black;
+		background: none;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: .5rem;
+		}
+	}
+	select.form-control,
+	.btn-1 {
+		@include media-breakpoint-up(xl) {
+			width: 135px;
+		}
+	}
+	.col-6 {
+		&:not(:first-child):not(:last-child) {
+			select.form-control {
+				@include media-breakpoint-up(xl) {
+					margin: 0 auto;
+				}
+			}
+		}
+		&:last-child {
+			text-align: right;
+		}
+		@include media-breakpoint-down(lg) {
+			margin-bottom: .5rem;
+		}
+	}
+}

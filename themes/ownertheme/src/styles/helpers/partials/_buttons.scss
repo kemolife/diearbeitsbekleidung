@@ -8,8 +8,8 @@ button {
 .btn {
     @extend .relative;
     @include display(inline-block, auto, auto);
-    @include border;
-    @include transition($dur:.3s, $tfunc:ease-in-out);
+    @include transition($dur:.15s, $tfunc:ease-in-out);
+	border: 2px solid transparent;
     overflow: hidden;
     background: transparent;
 	font-size: inherit;
@@ -18,8 +18,12 @@ button {
 	&-primary,
 	&-1,
 	&-2 {
-		width: 200px;
-    	padding: 14px 0;
+		height: 30px;
+		font-family: $oswald-sb;
+		line-height: 1em;
+		.mdi {
+			@include font-size(20px);
+		}
 	}
 	&-post-more {
 		padding: 0;
@@ -29,10 +33,13 @@ button {
 		text-decoration: underline;
 	}
     &-1 {
-        border-color: #000;
+		padding: 3px 15px 5px;
+        border-color: $cl_brand;
+        background: $cl_brand;
+		color: white;
         &:hover,
         &:focus {
-            background: #fff;
+            background: white;
             color: #000;
         }
         .line {
