@@ -13,7 +13,9 @@ const slick = require('slick-carousel-browserify');
 		navClose:		'navbar-close',
 		// home beruf
 		berufList:		'.section__beruf--list',
-		homeCategories:	'.section__top-categories--list'
+		homeCategories:	'.section__top-categories--list',
+		//
+		introSlider:	'.intro__slider'
 	};
 	
 	/*$(app.navToggler).toggle(function() {
@@ -35,6 +37,23 @@ const slick = require('slick-carousel-browserify');
 	/*$('.'+app.navClose).on('click', function() {
 		$(this).removeClass(app.navClose).closest('.col-4').siblings('.col-4').fadeIn();
 	});*/
+	
+	
+	if($(app.introSlider.length)) {
+		slick($(app.introSlider), {
+			slidesToShow: 1,
+			dots: true,
+			arrows: false,
+			mobileFirst: true,
+			responsive: [{
+				breakpoint: 1199,
+				settings: {
+					arrows: true,
+					dots: false
+				}
+			}]
+		});
+	}
 	
 	
 	if(window.innerWidth > 1199) {

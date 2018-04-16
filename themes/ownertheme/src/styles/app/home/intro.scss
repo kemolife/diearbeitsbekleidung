@@ -1,0 +1,134 @@
+.intro {
+	overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		height: 180px;
+	}
+	@include media-breakpoint-between(md, lg) {
+		height: 240px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 364px;
+	}
+	&__slider {
+		width: 100%;
+		@include media-breakpoint-down(lg) {
+			height: 100%;
+		}
+		@include media-breakpoint-up(xl) {
+			@include size(1170px, 100%);
+			margin: 0 auto;
+		}
+		&:hover,
+		&:active {
+			.slick-arrow {
+				opacity: 1;
+			}
+		}
+	}
+	.slick {
+		&-list,
+		&-track {
+			height: 100%;
+		}
+		&-dots {
+			position: relative;
+			top: -12px;
+			@include hide-text;
+		}
+		&-arrow {
+			opacity: 0.125;
+		}
+	}
+	&__slide,
+	.container {
+		height: 100%;
+	}
+	&__slide {
+		&--pic {
+			@include size(auto, 100%);
+			z-index: 1;
+			@include media-breakpoint-down(xs) {
+				@include position;
+			}
+			@include media-breakpoint-up(sm) {
+				@include position($left:50%);
+				@include translateX;
+			}
+			img {
+				height: 100%;
+			}
+		}
+		&--content {
+			position: relative;
+			z-index: 2;
+			@include media-breakpoint-down(lg) {
+				padding: .75rem 0;
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 2rem 0;
+			}
+		}
+		&--title {
+			font-family: $oswald-sb;
+			@include media-breakpoint-down(lg) {
+				@include font-size(18px);
+			}
+			@include media-breakpoint-up(xl) {
+				@include font-size(36px);
+			}
+		}
+		&--text {
+			line-height: 1.125;
+			@include media-breakpoint-down(sm) {
+				width: 31%;
+				margin: .5em .75em;
+			}
+			@include media-breakpoint-between(md, lg) {
+				width: 20%;
+				margin: .75em .875em;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 15%;
+				margin: 1.5em;
+				@include font-size(24px);
+				font-family: $fira-m;
+			}
+		}
+		$circle-size-s: 60px;
+		$circle-size-m: 80px;
+		$circle-size-l: 105px;
+		&--label {
+			background: $cl_theme-red;
+			border-radius: 50%;
+			@include media-breakpoint-down(sm) {
+				@include size($circle-size-s, $circle-size-s);
+				@include position($top:73%, $left:30%);
+			}
+			@include media-breakpoint-between(md, lg) {
+				@include size($circle-size-m, $circle-size-m);
+				@include position($top:90%, $left:20%);
+			}
+			@include media-breakpoint-up(xl) {
+				@include size($circle-size-l, $circle-size-l);
+				@include position($top:74%, $left:16%);
+			}
+		}
+		&--num {
+			text-align: center;
+			color: white;
+			font-family: $oswald-sb;
+			@include media-breakpoint-down(sm) {
+				line-height: $circle-size-s;
+				@include font-size(20px);
+			}
+			@include media-breakpoint-between(md, lg) {
+				line-height: $circle-size-m;
+				@include font-size(24px);
+			}
+			@include media-breakpoint-up(xl) {
+				line-height: $circle-size-l;
+				@include font-size(34px);
+			}
+		}
+	}
+}

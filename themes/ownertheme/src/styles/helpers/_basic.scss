@@ -119,14 +119,14 @@ $hide_down: sm md lg;
 }
 
 .section {
-	position: relative;
+	@extend .relative;
 	&__back {
 		@include size(100%, 100%);
 		@include position;
 		z-index: 1;
 	}
 	&__front {
-		position: relative;
+		@extend .relative;
 		z-index: 2;
 		@include media-breakpoint-down(md) {
 			padding: 1rem 0;
@@ -146,6 +146,7 @@ $hide_down: sm md lg;
 }
 
 .container {
+	@extend .relative;
 	@include media-breakpoint-up(xl) {
 		padding-left: 15px;
 		padding-right: 15px;
@@ -183,7 +184,7 @@ img.float {
 
 .slick {
 	&-slider {
-		position: relative;
+		@extend .relative;
 	}
 	&-list {
 		overflow: hidden;
@@ -205,6 +206,30 @@ img.float {
 		&.slick-next {
 			left: auto;
 			right: -20px;
+		}
+	}
+	&-dots {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			@include size(8px, 8px);
+			margin: 0 .125rem;
+			border: 1px solid lighten($cl_theme-dark, 30%);
+			border-radius: 50%;
+			&.slick-active {
+				border-color: $cl_brand;
+				background: $cl_brand;
+			}
+		}
+		button {
+			display: block;
+			@include size(100%, 100%);
+			margin: 0;
+			padding: 0;
+			color: transparent;
 		}
 	}
 }
