@@ -7,17 +7,21 @@ const slick = require('slick-carousel-browserify');
     'use strict';
 	
 	let app = {
-		navClass:		'.navbar',
-		navExtended:	'navbar__extended',
-		navToggler:		'.navbar-toggler',
-		navClose:		'navbar-close',
+		animSpeed			: 200,
+		navClass			: '.navbar',
+		navExtended			: 'navbar__extended',
+		navToggler			: '.navbar-toggler',
+		navClose			: 'navbar-close',
 		// home beruf
-		berufList:		'.section__beruf--list',
-		homeCategories:	'.section__top-categories--list',
+		berufList			: '.section__beruf--list',
+		homeCategories		: '.section__top-categories--list',
 		//
-		introSlider:	'.intro__slider',
+		introSlider			: '.intro__slider',
 		//
-		homeTopSales:	'.section__product--mobile .tab-pane>.row'
+		homeTopSales		: '.section__product--mobile .tab-pane',
+		// desk header search
+		headerSearchBtn		: '.header__desktop .header__search--btn',
+		headerSearchField	: '.header__search input'
 	};
 	
 	/*$(app.navToggler).toggle(function() {
@@ -40,6 +44,11 @@ const slick = require('slick-carousel-browserify');
 		$(this).removeClass(app.navClose).closest('.col-4').siblings('.col-4').fadeIn();
 	});*/
 	
+	// desk header search
+	$(app.headerSearchBtn).on('click', function() {
+		$(app.headerSearchField).slideToggle(app.animSpeed);
+	});
+	
 	// intro slider
 	if($(app.introSlider.length)) {
 		slick($(app.introSlider), {
@@ -58,9 +67,11 @@ const slick = require('slick-carousel-browserify');
 	}
 	
 	// home top/sales/new slider
-	if($(app.homeTopSales.length)) {
+	if($(app.homeTopSales).length) {
+		console.log($(app.homeTopSales).length);
 		$(app.homeTopSales).each(function() {
-			slick($(this), {
+		console.log($(this));
+			slick($(this).find('>.row'), {
 				slidesToShow: 2,
 				dots: true,
 				arrows: false,

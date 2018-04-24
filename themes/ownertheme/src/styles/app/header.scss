@@ -1,7 +1,7 @@
-
-$header-p-r: 2.25rem;
-
 .header {
+	$header-p-r: 2.25rem;
+	$desknav-h: 40px;
+	
 	position: relative;
 	z-index: $zindex-dropdown;
 	&__mobile {
@@ -92,6 +92,7 @@ $header-p-r: 2.25rem;
 				font-size: 150%;
 			}
 		}
+		
 		$mdi-colors: (
 			phone: $cl_theme-blue,
 			facebook-messenger: $cl-facebook,
@@ -102,6 +103,7 @@ $header-p-r: 2.25rem;
 				color: $color;
 			}
 		}
+		
 		span {
 			font-family: $oswald-sb;
 			@include media-breakpoint-down(md) {
@@ -162,17 +164,39 @@ $header-p-r: 2.25rem;
 		
 	}
 	&__search {
+		$dSearch-r: 10px;
+		
 		position: relative;
+		.header__desktop & {
+			height: 100%;
+			@include position($left:auto, $right:$dSearch-r / 2);
+		}
 		.form-control {
 			@include media-breakpoint-down(lg) {
 				margin: 4px 0;
 				padding: .125rem .5rem;
 			}
+			.header__desktop & {
+				width: 480px;
+				display: none;
+				@include position($top:$desknav-h - 2px, $left:auto, $right:$dSearch-r);
+			}
 		}
 		&--btn {
-			@include width-height($w:40px);
-			@include position($left:auto, $right:0);
-			z-index: 2;
+			.header__mobile & {
+				@include size($desknav-h, 100%);
+				@include position($left:auto, $right:0);
+				z-index: 2;
+			}
+			.header__desktop & {
+				height: 100%;
+				color: white;
+			}
+			&:hover, &:active {
+				.header__desktop & {
+					color: $cl_brand;
+				}
+			}
 			.mdi {
 				line-height: 1.25;
 			}

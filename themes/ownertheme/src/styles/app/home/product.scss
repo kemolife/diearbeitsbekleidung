@@ -9,6 +9,19 @@
 			display: none !important;
 		}
 	}
+	// this trick needs for working slick-slider
+	.tab-content,
+	.pill-content {
+		& > .pill-pane
+		& > .tab-pane {
+			display: block;
+			height: 0;
+			overflow: hidden;
+		}
+		& > .active {
+			height: auto;
+		}
+	}
 	.nav {
 		&-tabs,
 		&-pills {
