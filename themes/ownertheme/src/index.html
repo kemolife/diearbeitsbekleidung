@@ -95,7 +95,16 @@
     <section class="section section__product">
     	<div class="section__back"></div>
     	<div class="section__front">
-    		<div class="container"></div>
+    		<div class="container">
+				<nav class="nav nav-pills" id="nav-pills">
+					<a class="nav-item nav-link active" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab" aria-controls="nav-discount" aria-selected="true">Räumungsverkauf</a>
+					<a class="nav-item nav-link" id="nav-top-tab" data-toggle="tab" href="#nav-top" role="tab" aria-controls="nav-top" aria-selected="false">Top-Seller</a>
+					<a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false">Neue Artikel</a>
+				</nav>
+    			@@include('includes/section-product-mobile.html')
+    			
+    			@@include('includes/section-product-desktop.html')
+			</div>
     	</div>
     </section><!-- .section__product -->
     
@@ -232,38 +241,27 @@
     	<div class="section__front">
     		<div class="container">
     			<div class="row section__usp--list">
-    				<div class="col-6 col-md-3 order-md-1 section__usp--item">
-    					<figure class="section__usp--img">
-    						<img src="img/usp/img-1.png" alt="usp image1">
-    					</figure>
-    					<div class="section__usp--title">
-    						<span>5 Jahre auf dem Markt</span>
-    					</div>
-    				</div>
-    				<div class="col-6 col-md-3 order-md-3 section__usp--item">
-    					<figure class="section__usp--img">
-    						<img src="img/usp/img-2.png" alt="usp image2">
-    					</figure>
-    					<div class="section__usp--title">
-    						<span>Garantie</span>
-    					</div>
-    				</div>
-    				<div class="col-6 col-md-3 order-md-2 section__usp--item">
-    					<figure class="section__usp--img">
-    						<img src="img/usp/img-3.png" alt="usp image3">
-    					</figure>
-    					<div class="section__usp--title">
-    						<span>Qualitätszertifikate</span>
-    					</div>
-    				</div>
-    				<div class="col-6 col-md-3 order-md-4 section__usp--item">
-    					<figure class="section__usp--img">
-    						<img src="img/usp/img-4.png" alt="usp image4">
-    					</figure>
-    					<div class="section__usp--title">
-    						<span>Qualitätszertifikate</span>
-    					</div>
-    				</div>
+    			@@loop("includes/partials/usp-item.html", [{
+					"itemNum": "1",
+					"itemClass": "order-md-1",
+					"itemTitle": "5 Jahre auf dem Markt",
+					"itemPic": "img-1.png"
+				},{
+					"itemNum": "2",
+					"itemClass": "order-md-3",
+					"itemTitle": "Garantie",
+					"itemPic": "img-2.png"
+				},{
+					"itemNum": "3",
+					"itemClass": "order-md-2",
+					"itemTitle": "Qualitätszertifikate",
+					"itemPic": "img-3.png"
+				},{
+					"itemNum": "4",
+					"itemClass": "order-md-4",
+					"itemTitle": "Qualitätszertifikate",
+					"itemPic": "img-4.png"
+				}])
     			</div>
     		</div>
     	</div>

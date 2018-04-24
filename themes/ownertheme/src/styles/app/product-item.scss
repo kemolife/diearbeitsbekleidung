@@ -1,0 +1,247 @@
+$posColSize: 8px;
+.product {
+	&__color,
+	&__size {
+		&--item {
+			@include size(30px, 30px);
+			margin-bottom: .75rem;
+			border: 1px solid $cl_theme-black;
+		}
+	}
+	&__color {
+		left: $posColSize;
+		&--item {}
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				left: 1.5rem;
+			}
+		}
+	}
+	&__size {
+		right: $posColSize;
+		&--item {
+			line-height: 30px;
+			text-transform: uppercase;
+			color: $cl_theme-black;
+		}
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				right: 1.5rem;
+			}
+		}
+	}
+}
+
+.card {
+	overflow: hidden;
+	border-radius: 0;
+	@include transition;
+	@include media-breakpoint-down(xs) {
+		margin: .5rem 0;
+		text-align: center;
+	}
+	@include media-breakpoint-up(sm) {
+		width: 262px;
+		margin: .75rem auto;
+	}
+	@include media-breakpoint-up(lg) {
+		.card-big & {
+			@include size(100%, calc(100% - 1.5rem));
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.card-big & {
+			padding: 1.5rem;
+			padding-top: 2rem;
+		}
+	}
+	/*@include media-breakpoint-up(xl) {
+		.card-big & {
+			@include size(100%, calc(100% - 2.5rem));
+		}
+	}*/
+	&:hover,
+	&:active {
+		box-shadow: 0px 0px 30px -5px $cl_theme-black !important;
+		.product__color,
+		.product__size {
+			z-index: 99;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	figure {
+		margin-bottom: 0;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			height: 150px;
+		}
+		@include media-breakpoint-up(lg) {
+			height: 215px;
+		}
+		@include media-breakpoint-only(lg) {
+			.card-big & {
+				height: 80%;
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			.card-big & {
+				height: 85%;
+			}
+		}
+	}
+	img {
+		@include size(auto, auto);
+		max-height: 100%;
+		max-width: 100%;
+	}
+	.col-sm-5 {
+		padding-right: 0;
+	}
+	.col-sm-7 {
+		@include media-breakpoint-up(sm) {
+			text-align: right;
+		}
+	}
+	&-body {
+		padding: 0 8px 8px;
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				padding: 0;
+			}
+		}
+	}
+	&-price,
+	&-title,
+	&-title a {
+		font-family: $oswald-sb;
+		color: $cl_theme-black;
+	}
+	&-title {
+		height: 40px;
+		margin-bottom: 0;
+		overflow: hidden;
+		@include font-size(16px);
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				height: 60px;
+				@include font-size(24px);
+			}
+		}
+	}
+	&-price {
+		@include media-breakpoint-down(xs) {
+			justify-content: center;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-right: -10px;
+		}
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				line-height: 1.25;
+			}
+		}
+		&-old {
+			position: relative;
+			font-family: $oswald-r;
+			color: lighten($cl_theme-dark, 25%);
+			@include media-breakpoint-down(xs) {
+				margin-right: .5rem;
+			}
+			@include media-breakpoint-up(sm) {
+				margin-right: .25rem;
+			}
+			@include media-breakpoint-up(lg) {
+				.card-big & {
+					margin-right: .875rem;
+					@include font-size(20px);
+				}
+			}
+			&::after {
+				@include pseudo-elm($h:1px);
+				@include position($top:50%);
+				@include translateY;
+				background: $cl_brand;
+			}
+		}
+		&-new,
+		&-default {
+			@include font-size(20px);
+			@include media-breakpoint-up(lg) {
+				.card-big & {
+					@include font-size(26px);
+				}
+			}
+		}
+		sup,
+		&-fraction {
+			top: -.615em;
+			margin-left: -5px;
+			font-size: 0.615em;
+			@include media-breakpoint-up(lg) {
+				.card-big & {
+					top: -.875em;
+					margin-left: -7px;
+					font-size: .5em;
+				}
+			}
+		}
+	}
+	.product__color,
+	.product__size {
+		@include position($top:$posColSize, $left:auto);
+		@include transition;
+		overflow: hidden;
+		visibility: hidden;
+		opacity: 0;
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				top: 40%;
+				@include translateY;
+			}
+		}
+	}
+	.badge {
+		@include position($top:.5rem);
+		z-index: 1;
+		border-radius: 0;
+		color: white;
+		font-family: $oswald-sb;
+		@include media-breakpoint-down(md) {
+			min-width: 40px;
+			@include font-size-height(12px, 2rem);
+		}
+		@include media-breakpoint-up(lg) {
+			min-width: 65px;
+			@include font-size-height(14px, 2rem);
+		}
+		@include media-breakpoint-up(lg) {
+			.card-big & {
+				top: 1.5em;
+				@include font-size-height(20px, 2.25rem);
+			}
+		}
+		&::after {
+			@include pseudo-elm($w:29px, $h:29px);
+			@include position($top:4.5px, $left:auto, $right:-14px);
+			z-index: -1;
+			transform: rotate(45deg);
+			border-radius: 4px;
+			@include media-breakpoint-up(lg) {
+				.card-big & {
+					@include size(34px, 34px);
+					top: 6px;
+					right: -16px;
+				}
+			}
+		}
+		&::before {
+			@include pseudo-elm($w:8px, $h:8px);
+			@include position($top:50%, $left:auto, $right:-12%);
+			@include translateY;
+			z-index: 1;
+			background: white;
+			border-radius: 50px;
+		}
+	}
+}

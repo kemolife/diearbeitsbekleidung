@@ -19,46 +19,98 @@
 <div class="page" data-role="page">
     
 <header id="header" class="header" data-role="banner">
-    <div class="container header__mobile">
-    	<div class="row">
-    		<div class="col-4">
-				<button class="navbar-toggler" id="menuToggle" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarNav" aria-expanded="false">
-					<span class="navbar-toggler-line"></span>
-					<span class="navbar-toggler-line"></span>
-					<span class="navbar-toggler-line"></span>
-				</button>
+    <div class="header__mobile">
+    	<div class="container">
+    		<div class="row">
+				<div class="col-4">
+					<button class="navbar-toggler" id="menuToggle" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarNav" aria-expanded="false">
+						<span class="navbar-toggler-line"></span>
+						<span class="navbar-toggler-line"></span>
+						<span class="navbar-toggler-line"></span>
+					</button>
+				</div>
+				<div class="col-4">
+					<figure class="header__logo">
+						<img src="img/logo-mob.png" alt="mobile logo">
+					</figure>
+				</div>
+				<div class="col-4 justify-content-end align-items-center">
+					@@include("partials/account-btn-header.html")
+					@@include('partials/cart-header.html')
+				</div>
 			</div>
-    		<div class="col-4">
-    			<figure class="header__logo">
-    				<img src="img/logo-mob.png" alt="mobile logo">
-    			</figure>
-    		</div>
-    		<div class="col-4 justify-content-end align-items-center">
-    			<div class="header__account">
-    				<button class="header__account--btn">
-    					<i class="mdi mdi-account" aria-hidden="true"></i>
-    				</button>
+			<form class="header__search">
+				<input type="search" class="form-control" placeholder="Search" aria-label="Search">
+				<button class="header__search--btn">
+					<i class="mdi mdi-magnify" aria-hidden="true"></i>
+				</button>
+			</form>
+    	</div>
+		@@include("partials/nav-mobile.html")
+    </div><!-- .header__mobile only for mobile devices -->
+    <div class="header__desktop">
+    	<div class="header__top">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-3 col-xl-2 header__left">
+    					<figure class="header__logo"><img src="img/logo-desktop.png" alt="site logo"></figure>
+    				</div>
+    				<div class="col-lg-9 col-xl-10 header__right">
+    					<div class="row align-items-lg-center">
+    						<div class="col-md-7 col-lg-8 col-xl-9">
+    							<nav class="nav">
+    								<a href="" class="nav-link" title="nav-1">Uber uns</a>
+    								<a href="" class="nav-link" title="nav-2">Versand und Zahlungsbedingungen</a>
+    								<a href="" class="nav-link" title="nav-3">Garantie</a>
+    								<a href="" class="nav-link" title="nav-4">Impressum</a>
+    								<a href="" class="nav-link" title="nav-5">Kontakt</a>
+    							</nav>
+    						</div>
+    						<div class="col-3 col-lg-2 col-xl-2">
+    							@@include("partials/account-btn-header.html")
+    						</div>
+    						<div class="col-2 col-xl-1">
+    							<div class="dropdown header__language">
+									<button class="btn dropdown-toggle" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span>DE</span>
+										<i class="mdi mdi-chevron-down"></i>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownLang">
+										<a class="dropdown-item" href="#" title="de" data-lang="de">DE</a>
+										<a class="dropdown-item" href="#" title="en" data-lang="en">EN</a>
+										<a class="dropdown-item" href="#" title="fr" data-lang="fr">FR</a>
+									</div>
+								</div>
+    						</div>
+    					</div>
+    					<div class="row">
+    						<div class="col-lg-6">
+    							<div class="d-flex header__contacts align-items-center">
+    								@@loop('partials/header-contacts-desktop.html', [{
+										"itemUrl": "##",
+										"itemClass": "phone",
+										"itemContent": "+49(441)55-979-565"
+									},{
+										"itemUrl": "##",
+										"itemClass": "facebook-messenger",
+										"itemContent": ""
+									},{
+										"itemUrl": "##",
+										"itemClass": "whatsapp",
+										"itemContent": ""
+									}])
+    							</div>
+    						</div>
+    						<div class="col-lg-6 text-right">
+    						@@include('partials/cart-header.html')
+    						</div>
+    					</div>
+    				</div>
     			</div>
-    			<div class="header__cart not-empty">
-    				<button class="header__cart--btn">
-    					<i class="mdi mdi-cart" aria-hidden="true"></i>
-    				</button>
-    				<span class="header__cart--counter">2</span>
-    			</div><!-- add class .not-empty when user choose product -->
     		</div>
     	</div>
-    	<form class="header__search">
-    		<input type="search" class="form-control" placeholder="Search" aria-label="Search">
-    		<button class="header__search--btn">
-				<i class="mdi mdi-magnify" aria-hidden="true"></i>
-			</button>
-    	</form>
-    </div><!-- .header__mobile only for mobile devices -->
-    <div class="container header__desktop">
-    	<div class="container">
-    		<p>desktop header</p>
+    	<div class="header__bottom">
+    		@@include("partials/nav-desktop.html")
     	</div>
     </div><!-- .header__desktop only for laptop|desktop|big monitors -->
-	<!-- nav block -->
-	@@include("partials/nav.html")
 </header><!-- #header -->

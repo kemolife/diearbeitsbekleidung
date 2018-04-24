@@ -11,6 +11,7 @@ button {
 
 textarea, input, select,
 a, button {
+	cursor: pointer;
 	outline: none;
 	box-shadow: none;
 	&:hover,
@@ -115,6 +116,50 @@ $hide_down: sm md lg;
 		@include media-breakpoint-down($size) {
 			display: none !important;
 		}
+	}
+}
+
+/* social icons color */
+$social-list: (
+	facebook: $cl-facebook,
+	google-plus: $cl-google,
+	linkedin: $cl-linkedin,
+	twitter: $cl-twitter
+);
+@each $social, $color in $social-list {
+	a:hover .mdi-#{$social},
+	a:active .mdi-#{$social} {
+		color: $color;
+	}
+}
+
+/* product labels color */
+$labels: (
+	discount: $cl_theme-red,
+	new: $cl_theme-blue,
+	top: $cl_theme-yellow
+);
+@each $label, $color in $labels {
+	.badge-#{$label} {
+		background-color: $color;
+		&::after {
+			background-color: $color;
+		}
+	}
+}
+
+/* product colors */
+$product-colors: (
+	white: white,
+	black: black,
+	red: $cl_theme-red,
+	green: $cl_theme-green,
+	blue: $cl_theme-blue,
+	yellow: $cl_theme-yellow
+);
+@each $item, $color in $product-colors {
+	.product__color--item.color-#{$item} {
+		background-color: $color;
 	}
 }
 

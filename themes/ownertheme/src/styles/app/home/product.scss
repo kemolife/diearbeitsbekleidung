@@ -1,1 +1,67 @@
-.section__product {}
+.section__product {
+	&--desktop {
+		.mobile & {
+			display: none !important;
+		}
+	}
+	&--mobile {
+		.desktop & {
+			display: none !important;
+		}
+	}
+	.nav {
+		&-tabs,
+		&-pills {
+			border: 1px solid $cl_brand;
+		}
+		&-item, 
+		&-link {
+			flex: 0 0 33.33333%;
+			max-width: 33.33333%;
+			border: none;
+			border-radius: 0;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			color: $cl_theme-black;
+			@include media-breakpoint-down(sm) {
+				font-family: $oswald-r;
+			}
+			@include media-breakpoint-up(md) {
+				font-family: $oswald-sb;
+				@include font-size(20px);
+			}
+			&.active,
+			&.show {
+				color: white;
+				background-color: $cl_brand;
+				border-color: $cl_brand;
+			}
+		}
+		&-link {
+			position: relative;
+			&::after {
+				@include pseudo-elm($w:1px, $h:70%);
+				@include position($top:50%, $left:100%);
+				@include translateY;
+				background: $cl_brand;
+			}
+			&.active, &.show {
+				&::after {
+					height: 100%;
+				}
+			}
+		}
+	}
+	.slick {
+		&-track {
+			min-width: 100%;
+		}
+		&-slide {
+			flex: none;
+		}
+		&-dots {
+			width: 100%;
+		}
+	}
+}

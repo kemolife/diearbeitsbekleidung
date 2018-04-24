@@ -15,7 +15,9 @@ const slick = require('slick-carousel-browserify');
 		berufList:		'.section__beruf--list',
 		homeCategories:	'.section__top-categories--list',
 		//
-		introSlider:	'.intro__slider'
+		introSlider:	'.intro__slider',
+		//
+		homeTopSales:	'.section__product--mobile .tab-pane>.row'
 	};
 	
 	/*$(app.navToggler).toggle(function() {
@@ -38,7 +40,7 @@ const slick = require('slick-carousel-browserify');
 		$(this).removeClass(app.navClose).closest('.col-4').siblings('.col-4').fadeIn();
 	});*/
 	
-	
+	// intro slider
 	if($(app.introSlider.length)) {
 		slick($(app.introSlider), {
 			slidesToShow: 1,
@@ -55,7 +57,25 @@ const slick = require('slick-carousel-browserify');
 		});
 	}
 	
+	// home top/sales/new slider
+	if($(app.homeTopSales.length)) {
+		$(app.homeTopSales).each(function() {
+			slick($(this), {
+				slidesToShow: 2,
+				dots: true,
+				arrows: false,
+				mobileFirst: true
+			});
+		});
+		/*slick($(app.homeTopSales), {
+			slidesToShow: 2,
+			dots: true,
+			arrows: false,
+			mobileFirst: true
+		});*/
+	}
 	
+	// beruf categories desktop slider
 	if(window.innerWidth > 1199) {
 		if($(app.berufList.length)) {
 			slick($(app.berufList), {
@@ -65,6 +85,7 @@ const slick = require('slick-carousel-browserify');
 		}
 	}
 	
+	// home gender categories mobile slider
 	if(window.innerWidth < 1200) {
 		if($(app.homeCategories.length)) {
 			slick($(app.homeCategories), {

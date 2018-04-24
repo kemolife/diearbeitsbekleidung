@@ -32,19 +32,25 @@ button {
 		color: $cl_theme-black;
 		text-decoration: underline;
 	}
+	&-primary,
     &-1 {
-		padding: 3px 15px 5px;
         border-color: $cl_brand;
         background: $cl_brand;
 		color: white;
         &:hover,
+        &:active,
         &:focus {
+			border-color: $cl_brand;
             background: white;
             color: #000;
         }
-        .line {
-            background: #000;
-        }
+    }
+    &-primary {
+		padding: 3px 0px 4px 4px;
+		@include font-size(14px);
+    }
+    &-1 {
+		padding: 3px 15px 5px;
     }
     &-2 {
         border-color: #fff;
@@ -53,9 +59,6 @@ button {
         &:focus {
             background: #000;
             color: #fff;
-        }
-        .line {
-            background: #fff;
         }
     }
 }

@@ -2,6 +2,7 @@
 * Main navigation styles
 */
 $nav-top: 85px;
+
 .navbar {
 	padding: 0;
 	@include transition;
@@ -12,15 +13,22 @@ $nav-top: 85px;
 		@include position($top:$nav-top, $left:-100%);
 		align-items: flex-start;
 	}
+	.header__desktop & {
+		overflow: visible;
+	}
 	.container {
 		@include transition;
-		opacity: 0;
+		.header__mobile & {
+			opacity: 0;
+		}
 	}
 	&__extended {
 		width: 100%;
 		left: 0;
 		.container {
-			opacity: 1;
+			.header__mobile & {
+				opacity: 1;
+			}
 		}
 	}
 	&-toggler {
@@ -59,12 +67,19 @@ $nav-top: 85px;
 			}
 		}
 	}
+	.nav-link {
+		text-transform: uppercase;
+	}
 }
 
 .nav {
 	width: 100%;
-	@include media-breakpoint-down(lg) {
-		@include flex-direction;
+	position: relative;
+	.header__mobile &,
+	.footer & {
+		@include media-breakpoint-down(lg) {
+			@include flex-direction;
+		}
 	}
 	&-item,
 	.dropdown-item {
@@ -80,6 +95,11 @@ $nav-top: 85px;
 			border-color: white;
 			text-align: left;
 		}
+		&:first-child {
+			.desktop & {
+				margin-left: -1.25rem;
+			}
+		}
 		&:last-child {
 			.nav-link {
 				color: $cl_brand;
@@ -93,16 +113,31 @@ $nav-top: 85px;
 	}
 	&-link,
 	.dropdown-item {
-		@include display;
 		@include transition;
-		padding: .125rem 0;
-		.header & {
-			font-family: $oswald-sb;
+		font-family: $oswald-sb;
+		.header__top & {
+			@include font-size(14px);
+			font-family: $oswald-r;
+			color: $cl_theme-black;
+		}
+		.header__mobile &,
+		.footer & {
+			@include display;
+			padding: .125rem 0;
+		}
+		.header__mobile &, {
 			text-transform: uppercase;
 		}
 	}
 	&-link {
-		color: white;
+		.header__mobile &,
+		.header__bottom &,
+		.footer & {
+			color: white;
+		}
+		.desktop & {
+			padding: .5rem 1.25rem;
+		}
 		.footer & {
 			@include font-size(14px);
 			font-family: $oswald-r;
@@ -115,6 +150,47 @@ $nav-top: 85px;
 		}
 		&::after {
 			display: none;
+		}
+	}
+	&__dropdown {
+		@include size(100vw, 0px);
+		@include position($top:40px, $left:50%);
+		@include translateX;
+		@include transition;
+		padding: .75rem 0;
+		overflow: hidden;
+		opacity: 0;
+		background: white;
+		border-top: 1px solid $cl_brand;
+		border-bottom: 1px solid $cl_brand;
+		.nav-item:hover & {
+			height: auto;
+			opacity: 1;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		figure {
+			margin: 0;
+		}
+		&--menu {
+			position: relative;
+			&::after {
+				@include pseudo-elm($w:1px);
+				max-height: 100px;
+				@include position($top:50%, $left:auto, $right:.75rem);
+				@include translateY;
+				background: $cl_brand;
+			}
+		}
+		&--link {
+			padding: .25rem;
+			font-family: $oswald-sb;
+			color: $cl_theme-black;
+			&:hover, &:active {
+				color: inherit;
+			}
 		}
 	}
 	.mdi {
@@ -139,9 +215,11 @@ $nav-top: 85px;
 				padding-left: 2.5rem;
 			}
 			&::after {
-				@include pseudo-elm($w:100vw, $h:calc(100% + 2px));
-				@include position($left:50%);
-				@include translateX;
+				.mobile & {
+					@include pseudo-elm($w:100vw, $h:calc(100% + 2px));
+					@include position($left:50%);
+					@include translateX;
+				}
 				z-index: 1;
 				background: white;
 			}

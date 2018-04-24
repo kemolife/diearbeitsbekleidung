@@ -7,18 +7,15 @@
 						<img src="img/logo-2.png" alt="footer logo">
 					</figure>
 					<div class="footer__media d-flex">
-						<a href="" class="footer__media--item">
-							<i class="mdi mdi-facebook"></i>
-						</a>
-						<a href="" class="footer__media--item">
-							<i class="mdi mdi-google-plus"></i>
-						</a>
-						<a href="" class="footer__media--item">
-							<i class="mdi mdi-linkedin"></i>
-						</a>
-						<a href="" class="footer__media--item">
-							<i class="mdi mdi-twitter"></i>
-						</a>
+						@@loop("partials/social-item.html", [{
+							"itemTitle": "facebook"
+						},{
+							"itemTitle": "google-plus"
+						},{
+							"itemTitle": "linkedin"
+						},{
+							"itemTitle": "twitter"
+						}])
 					</div>
 				</div>
 				<div class="col-6 col-lg-3 footer__nav">
@@ -105,7 +102,7 @@
 					<span>&copy; diearbeitsbekleidung, 2018</span>
 				</div>
 				<div class="col-6 text-right">
-					<span>Developed by </span><a href="https://onweb.com.ua/">OnWeb</a>
+					<span>Developed by </span><a href="https://onweb.com.ua/" title="OnWeb Digital Agency" target="_blank">OnWeb</a>
 				</div>
 			</div>
 		</div>
