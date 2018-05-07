@@ -1,4 +1,8 @@
 /* very basic styles */
+
+$box-shadow: 0px 5px 10px rgba($cl_theme-dark, .625);
+$box-shadow-center: 0px 0px 20px rgba($cl_theme-dark, .625);
+
 body {
 	overflow-x: hidden;
     font-family: $primary-font;
@@ -99,6 +103,10 @@ h2, .h2 {
 		background-color: $cl_theme-dark-2;
 		color: white;
 	}
+}
+
+.mdi {
+	//@include transition;
 }
 
 $hide_up: md lg xl;
@@ -277,4 +285,21 @@ img.float {
 			color: transparent;
 		}
 	}
+}
+
+.dropdown {
+	&-menu {
+		box-shadow: $box-shadow;
+		&-right {
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+.square {
+	display: block;
+	//@include size(30px, 30px);
+	border: 1px solid $cl_theme-dark;
+	text-align: center;
 }

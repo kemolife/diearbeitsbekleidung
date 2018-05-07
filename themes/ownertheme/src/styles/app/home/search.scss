@@ -1,4 +1,5 @@
 .section__search {
+	z-index: 99;
 	.section__back {
 		background-image: url("#{$img-bg}/bg-seo.jpg");
 		background-size: cover;
@@ -10,24 +11,44 @@
 			padding-bottom: 1.875rem;
 		}
 	}
-	select.form-control {
-		height: 30px;
-		border: none;
-		border-radius: 0;
-		border-bottom: 1px solid $cl_theme-black;
-		background: none;
-		@include media-breakpoint-down(lg) {
-			margin-bottom: .5rem;
+	.dropdown {
+		&-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0;
+			line-height: 1.125;
+			text-align: left;
+			border-bottom: 1px solid $cl_theme-black;
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 135px;
+			}
+			&::after {
+				display: none;
+			}
 		}
-	}
-	select.form-control,
-	.btn-1 {
-		@include media-breakpoint-up(xl) {
-			width: 135px;
+		&-title {
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: capitalize;
+		}
+		a {
+			color: $cl_theme-dark;
+		}
+		.mdi {
+			font-size: 150%;
+			text-align: right;
+			&::before {
+				margin-right: -5px;
+			}
 		}
 	}
 	.col-6 {
 		&:not(:first-child):not(:last-child) {
+			.dropdown-toggle,
 			select.form-control {
 				@include media-breakpoint-up(xl) {
 					margin: 0 auto;
@@ -41,4 +62,31 @@
 			margin-bottom: .5rem;
 		}
 	}
+	.btn-1 {
+		padding: 0 15px;
+		line-height: 1.125;
+		.mdi {
+			margin-left: .5rem;
+			vertical-align: top;
+		}
+	}
+	/*select.form-control {
+		height: 30px;
+		padding-left: 0;
+		padding-right: 0;
+		border: none;
+		border-radius: 0;
+		border-bottom: 1px solid $cl_theme-black;
+		background: none;
+		text-transform: capitalize;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: .5rem;
+		}
+	}
+	select.form-control,
+	.btn-1 {
+		@include media-breakpoint-up(xl) {
+			width: 135px;
+		}
+	}*/
 }

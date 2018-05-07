@@ -1,6 +1,20 @@
-<div class="header__account">
-	<button class="header__account--btn">
+<div class="header__account dropdown">
+	<button class="header__account--btn dropdown-toggle" type="button" id="dropAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="mdi mdi-account" aria-hidden="true"></i>
 		<span>Anmeldung</span>
 	</button>
+	<form class="dropdown-menu dropdown-menu-right">
+		<div class="form-group">
+			<label for="enterAccountMail">Email address</label>
+			<input type="email" class="form-control" id="enterAccountMail" placeholder="email@example.com">
+		</div>
+		<div class="form-group">
+			<label for="enterAccountPassword">Password</label>
+			<input type="password" class="form-control" id="enterAccountPassword" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-block btn-1">
+			<span>Sign in</span>
+			<i class="mdi mdi-login" aria-hidden="true"></i>
+		</button>
+	</form>
 </div>

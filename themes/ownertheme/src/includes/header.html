@@ -17,33 +17,8 @@
 <body>
 <!-- main container for page elements -->
 <div class="page" data-role="page">
-    
 <header id="header" class="header" data-role="banner">
-    <div class="header__mobile">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-4">
-					<button class="navbar-toggler" id="menuToggle" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarNav" aria-expanded="false">
-						<span class="navbar-toggler-line"></span>
-						<span class="navbar-toggler-line"></span>
-						<span class="navbar-toggler-line"></span>
-					</button>
-				</div>
-				<div class="col-4">
-					<figure class="header__logo">
-						<img src="img/logo-mob.png" alt="mobile logo">
-					</figure>
-				</div>
-				<div class="col-4 justify-content-end align-items-center">
-					@@include("partials/account-btn-header.html")
-					@@include('partials/cart-header.html')
-				</div>
-			</div>
-			@@include('partials/header-search.html')
-    	</div>
-		@@include("partials/nav-mobile.html")
-    </div><!-- .header__mobile only for mobile devices -->
-    <div class="header__desktop">
+    <!--<div class="header__desktop">-->
     	<div class="header__top">
     		<div class="container">
     			<div class="row">
@@ -105,7 +80,7 @@
     		</div>
     	</div>
     	<div class="header__bottom">
-    		@@include("partials/nav-desktop.html")
+    		@@include("partials/nav-main.html")
     	</div>
-    </div><!-- .header__desktop only for laptop|desktop|big monitors -->
+    <!--</div>--><!-- .header__desktop only for laptop|desktop|big monitors -->
 </header><!-- #header -->

@@ -30,8 +30,8 @@
 }
 
 //-------- for :after, :before
-@mixin pseudo-elm($display:block, $w:100%, $h:100%) {
-    content: "";
+@mixin pseudo-elm($content:"", $display:block, $w:100%, $h:100%) {
+    content: $content;
     display: $display;
     width: $w;
     height: $h;

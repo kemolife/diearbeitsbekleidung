@@ -7,7 +7,6 @@ button {
 
 .btn {
     @extend .relative;
-    @include display(inline-block, auto, auto);
     @include transition($dur:.15s, $tfunc:ease-in-out);
 	border: 2px solid transparent;
     overflow: hidden;

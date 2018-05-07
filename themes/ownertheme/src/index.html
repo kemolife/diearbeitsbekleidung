@@ -46,39 +46,139 @@
     			<form action="" class="form">
     				<div class="row">
     					<div class="col-6 col-md-4 col-xl-2">
-    						<!--<label for="searchSelect-1">State</label>-->
-							<select id="searchSelect-1" class="form-control form-control-sm">
-								<option selected>Alles</option>
-								<option>...</option>
-							</select>
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Alles</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch1">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Alles",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "herren",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "damen",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "kinder",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
-    						<!--<label for="searchSelect-2">State</label>-->
-							<select id="searchSelect-2" class="form-control form-control-sm">
-								<option selected>Typ</option>
-								<option>...</option>
-							</select>
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Typ</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch2">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Typ",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "typ2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "typ3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "typ4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
-    						<!--<label for="searchSelect-3">State</label>-->
-							<select id="searchSelect-3" class="form-control form-control-sm">
-								<option selected>Marke</option>
-								<option>...</option>
-							</select>
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Marke</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch3">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Marke",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "marke2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "marke3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "marke4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
-    						<!--<label for="searchSelect-4">State</label>-->
-							<select id="searchSelect-4" class="form-control form-control-sm">
-								<option selected>Farbe</option>
-								<option>...</option>
-							</select>
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">farbe</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch4">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "farbe",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "farbe2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "farbe3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "farbe4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
-    						<!--<label for="searchSelect-5">State</label>-->
-							<select id="searchSelect-5" class="form-control form-control-sm">
-								<option selected>Größe</option>
-								<option>...</option>
-							</select>
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Größe</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch5">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "s",
+									"itemSelected": "",
+									"itemBullen": "true"
+								},{
+									"itemName": "m",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "l",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "xl",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
     						<button type="submit" class="btn btn-1">
@@ -143,7 +243,7 @@
     	<div class="section__front">
     		<div class="container">
     			<div class="section__title h1">Beruf</div>
-    			<div class="row section__beruf--list text-sm-center">
+    			<div class="row section__beruf--list">
     			@@loop("includes/partials/beruf-item.html", [{
 					"itemNum": "1",
 					"itemTitle": "Maler arbeitskleidung",

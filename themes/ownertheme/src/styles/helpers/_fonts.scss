@@ -21,3 +21,8 @@
         src: url($path) format($format);
     }
 }
+
+// mdi
+@function mdi($name) {
+    @return char(nth($hexes, index($names, $name)));
+}

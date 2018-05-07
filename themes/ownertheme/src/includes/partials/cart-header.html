@@ -1,7 +1,64 @@
-<div class="header__cart not-empty">
-	<button class="header__cart--btn">
+<div class="header__cart dropdown not-empty">
+	<button class="dropdown-toggle header__cart--btn" type="button" id="dropCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="header__cart--title">Warenkorb</span>
 		<i class="mdi mdi-cart" aria-hidden="true"></i>
 		<span class="badge badge-light">2</span>
 	</button>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="header__cart--list">
+			@@loop("cart-header-item.html", [{
+				"itemTitle": "Arbeitsjacke Berlin",
+				"itemImg": "prod-6-1.jpg",
+				"itemColor": "blue",
+				"itemSize": "s",
+				"itemCount": "1",
+				"itemPrice": "28",
+				"itemOldPrice": "38"
+			},{
+				"itemTitle": "Kochjacke langarm mit verdeckten Druckknöpfen",
+				"itemImg": "prod-1-1.jpg",
+				"itemColor": "red",
+				"itemSize": "s",
+				"itemCount": "1",
+				"itemPrice": "28",
+				"itemOldPrice": "38"
+			}])
+		</div>
+		<div class="header__cart--total">
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>MwSt.</span>
+				</div>
+				<div class="col-4 price">
+					<div class="price-default">
+						<span class="price-part1">5.</span>
+						<sup class="price-part2">80</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>Gesamt</span>
+				</div>
+				<div class="col-4">
+					<div class="price-default">
+						<span class="price-part1">63.</span>
+						<sup class="price-part2">78</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-12">
+					<small>Preise inkl. MwSt.</small>
+				</div>
+			</div>
+		</div>
+		@@include("btn.html", {
+			"itemClass": "btn-block btn-1",
+			"itemTitle": "Zur kasse",
+			"itemIcon": "cart"
+		})
+	</div>
 </div><!-- add class .not-empty when user choose product -->

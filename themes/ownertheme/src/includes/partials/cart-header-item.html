@@ -1,0 +1,39 @@
+<div class="header__cart--item cart__product row">
+	<figure class="cart__product--image col-3">
+		<img src="img/product/@@itemImg" alt="@@itemTitle">
+	</figure>
+	<div class="cart__product--body col-9 row">
+		<a href="" class="cart__product--title h4 col-10">
+			<span>@@itemTitle</span>
+		</a>
+		<div class="cart__product--remove col-2">
+			<button type="button" class="btn btn-default">
+				<i class="mdi mdi-close" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="cart__product--color col-2">
+			<span class="cart__product--param">Farbe</span>
+			<span class="product__color--item color-@@itemColor square"></span>
+		</div>
+		<div class="cart__product--size col-2">
+			<span class="cart__product--param">Größe</span>
+			<span class="product__size--item square">@@itemSize</span>
+		</div>
+		<div class="cart__product--count col-2">
+			<span class="cart__product--param">Anzahl</span>
+			<span class="square">@@itemCount</span>
+		</div>
+		<div class="cart__product--price price col-6 text-right">
+			<div class="price-old">
+				<span class="price-part1">@@itemOldPrice.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+			<div class="price-default">
+				<span class="price-part1">@@itemPrice.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+		</div>
+	</div>
+</div>

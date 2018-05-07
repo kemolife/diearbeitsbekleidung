@@ -31,7 +31,7 @@
 
 
 //-------- transition
-@mixin transition($prop:all, $dur:0.35s, $tfunc:ease, $del: null) {
+@mixin transition($prop:all, $dur:0.15s, $tfunc:ease, $del: null) {
     -webkit-transition: $prop $dur $tfunc $del;
     -moz-transition: $prop $dur $tfunc $del;
     -o-transition: $prop $dur $tfunc $del;

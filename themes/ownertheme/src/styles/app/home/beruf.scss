@@ -13,6 +13,9 @@
 		}
 	}
 	&--list {
+		@include media-breakpoint-between(sm, lg) {
+			text-align: center;
+		}
 		.slick {
 			&-list {
 				max-width: 1170px;
@@ -21,7 +24,7 @@
 				overflow: hidden;
 			}
 			&-arrow {
-				opacity: 0.15;
+				opacity: 0;
 				&.slick-prev {
 					left: -40px;
 				}
@@ -37,8 +40,7 @@
 			}
 		}
 		&:active .slick-arrow,
-		&:hover .slick-arrow,
-		{
+		&:hover .slick-arrow {
 			opacity: 1;
 		}
 	}
@@ -73,7 +75,7 @@
 			@include media-breakpoint-up(xl) {
 				text-decoration: none;
 				color: inherit;
-				box-shadow: 0px 0px 30px -5px $cl_theme-black !important;
+				box-shadow: $box-shadow-center !important;
 			}
 		}
 	}
