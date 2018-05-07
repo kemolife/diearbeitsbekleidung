@@ -1,0 +1,43 @@
+.section__usp {
+	.section__back {
+		background-image: url("#{$img-bg}/bg-usp.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.section__front {
+		
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 0;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 19px 0;
+		}
+	}
+	&--item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		@include media-breakpoint-down(sm) {
+			margin: 5px 0 26px;
+		}
+	}
+	&--title {
+		color: white;
+		line-height: 1;
+		font-family: $oswald-sb;
+		@include media-breakpoint-up(lg) {
+			@include font-size(20px);
+		}
+	}
+	&--img {
+		margin-bottom: .125rem;
+		@include media-breakpoint-down(md) {
+			@include size(100%, 40px);
+		}
+		img {
+			@include size(auto, 100%);
+		}
+	}
+}

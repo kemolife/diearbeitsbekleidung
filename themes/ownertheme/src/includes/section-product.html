@@ -1,0 +1,120 @@
+<div class="section__product--desktop">
+	<nav class="nav nav-pills" id="nav-pills">
+		<a class="nav-item nav-link active" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab" aria-controls="nav-discount" aria-selected="true">Räumungsverkauf</a>
+		<a class="nav-item nav-link" id="nav-top-tab" data-toggle="tab" href="#nav-top" role="tab" aria-controls="nav-top" aria-selected="false">Top-Seller</a>
+		<a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false">Neue Artikel</a>
+	</nav>
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="nav-discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+			<div class="row">
+				@@loop("partials/card-item-label.html", [{
+					"itemClass": "col-6 col-xl-6",
+					"itemNum": "1",
+					"itemTitle": "Malerhose Malerhose Malerhose Malerhose Malerhose",
+					"itemPic": "prod-1-2.jpg",
+					"itemLabel": "discount",
+					"itemLabelText": "-25%"
+				},{
+					"itemClass": "col-6 col-xl-3",
+					"itemNum": "2",
+					"itemTitle": "Arbeitsjacke Berlin",
+					"itemPic": "prod-2-1.jpg",
+					"itemLabel": "discount",
+					"itemLabelText": "-25%"
+				},{
+					"itemClass": "col-6 col-xl-3",
+					"itemNum": "3",
+					"itemTitle": "Crew Neck Sweatshirt - WUI20",
+					"itemPic": "prod-3-1.jpg",
+					"itemLabel": "discount",
+					"itemLabelText": "-25%"
+				},{
+					"itemClass": "col-6 col-xl-3",
+					"itemNum": "3",
+					"itemTitle": "Damen Arztkittel Medizin weiß",
+					"itemPic": "prod-4-1.jpg",
+					"itemLabel": "discount",
+					"itemLabelText": "-25%"
+				}])
+				<div class="col-lg-7 col-xl-6">
+					<div class="row">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="nav-top" role="tabpanel" aria-labelledby="nav-top-tab">
+			<div class="row">
+				<div class="col-lg-7 col-xl-6">
+					<div class="row">
+					@@loop("partials/card-item-label.html", [{
+						"itemClass": "col-6",
+						"itemNum": "1",
+						"itemTitle": "Malerhose Malerhose Malerhose Malerhose Malerhose",
+						"itemPic": "prod-1-2.jpg",
+						"itemLabel": "top",
+						"itemLabelText": "Top"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "2",
+						"itemTitle": "Arbeitsjacke Berlin",
+						"itemPic": "prod-2-1.jpg",
+						"itemLabel": "top",
+						"itemLabelText": "Top"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "3",
+						"itemTitle": "Crew Neck Sweatshirt - WUI20",
+						"itemPic": "prod-3-1.jpg",
+						"itemLabel": "top",
+						"itemLabelText": "Top"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "3",
+						"itemTitle": "Damen Arztkittel Medizin weiß",
+						"itemPic": "prod-4-1.jpg",
+						"itemLabel": "top",
+						"itemLabelText": "Top"
+					}])
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">
+			<div class="row">
+				<div class="col-lg-7 col-xl-6">
+					<div class="row">
+					@@loop("partials/card-item-label.html", [{
+						"itemClass": "col-6",
+						"itemNum": "1",
+						"itemTitle": "Malerhose Malerhose Malerhose Malerhose Malerhose",
+						"itemPic": "prod-1-2.jpg",
+						"itemLabel": "new",
+						"itemLabelText": "New"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "2",
+						"itemTitle": "Arbeitsjacke Berlin",
+						"itemPic": "prod-2-1.jpg",
+						"itemLabel": "new",
+						"itemLabelText": "New"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "3",
+						"itemTitle": "Crew Neck Sweatshirt - WUI20",
+						"itemPic": "prod-3-1.jpg",
+						"itemLabel": "new",
+						"itemLabelText": "New"
+					},{
+						"itemClass": "col-6",
+						"itemNum": "3",
+						"itemTitle": "Damen Arztkittel Medizin weiß",
+						"itemPic": "prod-4-1.jpg",
+						"itemLabel": "new",
+						"itemLabelText": "New"
+					}])
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- product-desktop -->

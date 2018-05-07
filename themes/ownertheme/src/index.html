@@ -1,0 +1,395 @@
+<!-- index.html -->
+
+<!-- header -->
+@@include("includes/header.html")
+
+<!-- main -->
+<main class="main" role="main">
+    <section class="section intro">
+    	<div class="intro__slider">
+    		<div class="intro__slide">
+    			<div class="container">
+    				<figure class="intro__slide--pic"><img src="img/slider-pic.jpg" alt="slider 1"></figure>
+					<div class="intro__slide--content">
+						<div class="intro__slide--title"><span>Arbeitskleidung krankenschwester</span></div>
+						<div class="intro__slide--text">
+							<p>Nur bis 31.03 beim Kauf ab 10 Stück</p>
+						</div>
+						<div class="intro__slide--label">
+							<div class="intro__slide--num"><span>-20%</span></div>
+						</div>
+					</div>
+    			</div>
+    		</div>
+    		<div class="intro__slide">
+    			<div class="container">
+    				<figure class="intro__slide--pic"><img src="img/slider-pic.jpg" alt="slider 1"></figure>
+					<div class="intro__slide--content">
+						<div class="intro__slide--title"><span>Arbeitskleidung krankenschwester 2</span></div>
+						<div class="intro__slide--text">
+							<p>Nur bis 31.03 beim Kauf ab 10 Stück 22</p>
+						</div>
+						<div class="intro__slide--label">
+							<div class="intro__slide--num"><span>-25%</span></div>
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div><!-- .intro__slider -->
+    </section><!-- .section__intro -->
+    
+    <section class="section section__search">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="section__title h1">Erweiterte Suche</div>
+    			<form action="" class="form">
+    				<div class="row">
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Alles</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch1">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Alles",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "herren",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "damen",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "kinder",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
+    					</div>
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Typ</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch2">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Typ",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "typ2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "typ3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "typ4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
+    					</div>
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Marke</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch3">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "Marke",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "marke2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "marke3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "marke4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
+    					</div>
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">farbe</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch4">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "farbe",
+									"itemSelected": "selected",
+									"itemBullen": "true"
+								},{
+									"itemName": "farbe2",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "farbe3",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "farbe4",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
+    					</div>
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" id="homeSearch5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="dropdown-title">Größe</span>
+									<i class="mdi mdi-chevron-down"></i>
+								</button>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch5">
+								@@loop("includes/partials/home-search.html", [{
+									"itemName": "s",
+									"itemSelected": "",
+									"itemBullen": "true"
+								},{
+									"itemName": "m",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "l",
+									"itemSelected": "",
+									"itemBullen": "false"
+								},{
+									"itemName": "xl",
+									"itemSelected": "",
+									"itemBullen": "false"
+								}])
+								</div>
+							</div>
+    					</div>
+    					<div class="col-6 col-md-4 col-xl-2">
+    						<button type="submit" class="btn btn-1">
+    							<span>Suche</span>
+    							<i class="mdi mdi-magnify" aria-hidden="true"></i>
+    						</button>
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </section><!-- .section__search -->
+    
+    <section class="section section__product">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+				<nav class="nav nav-pills" id="nav-pills">
+					<a class="nav-item nav-link active" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab" aria-controls="nav-discount" aria-selected="true">Räumungsverkauf</a>
+					<a class="nav-item nav-link" id="nav-top-tab" data-toggle="tab" href="#nav-top" role="tab" aria-controls="nav-top" aria-selected="false">Top-Seller</a>
+					<a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false">Neue Artikel</a>
+				</nav>
+    			@@include('includes/section-product-mobile.html')
+    			
+    			@@include('includes/section-product-desktop.html')
+			</div>
+    	</div>
+    </section><!-- .section__product -->
+    
+    <section class="section section__top-categories">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="section__title h1">Top Kategorien</div>
+    			<div class="row section__top-categories--list">
+    			@@loop("includes/partials/top-categories-item.html", [{
+					"itemNum": "1",
+					"itemClass": "",
+					"itemTitle": "Arbeitskleidung damen",
+					"itemSublist": "<li><a href='' title='cat 1'>Hosen</a></li><li><a href='' title='cat 2'>Westen</a></li><li><a href='' title='cat 3'>Jacken</a></li><li><a href='' title='cat 4'>Overalls</a></li><li><a href='' title='cat 5'>Mantel</a></li>",
+					"itemPic": "top-cats-1.jpg"
+				},{
+					"itemNum": "2",
+					"itemClass": "bg-gradient",
+					"itemTitle": "Arbeitskleidung herren",
+					"itemSublist": "<li><a href='' title='cat 1'>Hosen</a></li><li><a href='' title='cat 2'>Westen</a></li><li><a href='' title='cat 3'>Jacken</a></li><li><a href='' title='cat 4'>Overalls</a></li><li><a href='' title='cat 5'>Mantel</a></li><li><a href='' title='cat 6'>Hosen</a></li><li><a href='' title='cat 7'>Westen</a></li><li><a href='' title='cat 8'>Jacken</a></li><li><a href='' title='cat 9'>Overalls</a></li><li><a href='' title='cat 10'>Mantel</a></li><li><a href='' title='cat 11'>Hosen</a></li><li><a href='' title='cat 12'>Westen</a></li><li><a href='' title='cat 13'>Jacken</a></li>",
+					"itemPic": "top-cats-2.jpg"
+				},{
+					"itemNum": "3",
+					"itemClass": "bg-gradient",
+					"itemTitle": "Arbeitskleidung kinder",
+					"itemSublist": "<li><a href='' title='cat 1'>Hosen</a></li><li><a href='' title='cat 2'>Westen</a></li><li><a href='' title='cat 3'>Jacken</a></li><li><a href='' title='cat 4'>Overalls</a></li><li><a href='' title='cat 5'>Mantel</a></li><li><a href='' title='cat 6'>Hosen</a></li><li><a href='' title='cat 7'>Westen</a></li><li><a href='' title='cat 8'>Jacken</a></li><li><a href='' title='cat 9'>Overalls</a></li>",
+					"itemPic": "top-cats-3.jpg"
+				}])
+				</div>
+    		</div>
+    	</div>
+    </section><!-- .section__top-categories -->
+    
+    <section class="section section__beruf">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="section__title h1">Beruf</div>
+    			<div class="row section__beruf--list">
+    			@@loop("includes/partials/beruf-item.html", [{
+					"itemNum": "1",
+					"itemTitle": "Maler arbeitskleidung",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "2",
+					"itemTitle": "Arbeitskleidung krankenhaus",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-2.jpg"
+				},{
+					"itemNum": "3",
+					"itemTitle": "Reinigung arbeitskleidung",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-3.jpg"
+				},{
+					"itemNum": "4",
+					"itemTitle": "Arbeitskleidung gastronomie",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "5",
+					"itemTitle": "Arbeitskleidung koch",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "6",
+					"itemTitle": "Arbeitskleidung elektriker",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "7",
+					"itemTitle": "Arbeitskleidung kosmetik",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "8",
+					"itemTitle": "Arbeitskleidung tischler",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "9",
+					"itemTitle": "Arbeitskleidung dachdecker",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "10",
+					"itemTitle": "Arbeitskleidung kfz",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "11",
+					"itemTitle": "Arbeitskleidung forst",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				},{
+					"itemNum": "12",
+					"itemTitle": "Arbeitskleidung metzger",
+					"itemText": "Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text.",
+					"itemPic": "beruf-1.jpg"
+				}])
+    			</div>
+    		</div>
+    	</div>
+    </section><!-- .section__beruf -->
+    
+    <section class="section section__print-logo">
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="section__title h1">Firmenlogodruck</div>
+    			<div class="row">
+    				<div class="col-12 col-md-6 section__print-logo--item">
+    					<figure class="section__print-logo--img">
+    						<img src="img/print-logo1.jpg" alt="print logo 1">
+    					</figure>
+    					<a href="#" class="section__print-logo--title" title="logo print">
+    						<span>Arbeitskleidung mit logo</span>
+    					</a>
+    				</div>
+    				<div class="col-12 col-md-6 section__print-logo--item">
+    					<figure class="section__print-logo--img">
+    						<img src="img/print-logo2.jpg" alt="print logo 2">
+    					</figure>
+    					<a href="#" class="section__print-logo--title" title="logo print">
+    						<span>Irmenlogo drucken</span>
+    					</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section><!-- .section__firmlogo -->
+    
+    <section class="section section__usp">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="row section__usp--list">
+    			@@loop("includes/partials/usp-item.html", [{
+					"itemNum": "1",
+					"itemClass": "order-md-1",
+					"itemTitle": "5 Jahre auf dem Markt",
+					"itemPic": "img-1.png"
+				},{
+					"itemNum": "2",
+					"itemClass": "order-md-3",
+					"itemTitle": "Garantie",
+					"itemPic": "img-2.png"
+				},{
+					"itemNum": "3",
+					"itemClass": "order-md-2",
+					"itemTitle": "Qualitätszertifikate",
+					"itemPic": "img-3.png"
+				},{
+					"itemNum": "4",
+					"itemClass": "order-md-4",
+					"itemTitle": "Qualitätszertifikate",
+					"itemPic": "img-4.png"
+				}])
+    			</div>
+    		</div>
+    	</div>
+    </section><!-- .section__usp -->
+    
+    <section class="section section__seo">
+    	<div class="section__back"></div>
+    	<div class="section__front">
+    		<div class="container">
+    			<div class="h1 section__title">SEO-Text</div>
+    			<article class="post">
+    				<p>Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, "consectetur", einer Lorem.</p>
+    				<img class="float-left" src="img/seo-pic.jpg" alt="seo image">
+    				<p>Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach.</p>
+    				<ul>
+    					<li>Es gibt viele Variationen der Passages</li>
+    					<li>des Lorem Ipsum</li>
+    					<li>aber der Hauptteil erlitt Änderungen</li>
+    				</ul>
+    				<p>Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext. Es gibt viele Variationen der Passages des Lorem Ipsum, aber der Hauptteil erlitt Änderungen in irgendeiner Form, durch Humor oder zufällige Wörter.</p>
+    				<a href="#" class="btn btn-post-more">
+						<span>Lesen Sie mehr...</span>
+    				</a>
+    			</article>
+    		</div>
+    	</div>
+    </section><!-- .section__seo -->
+</main>
+
+<!-- footer -->
+@@include("includes/footer.html")

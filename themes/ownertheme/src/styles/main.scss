@@ -1,0 +1,20 @@
+
+/* material icons */
+@import "../../node_modules/@mdi/font/scss/materialdesignicons";
+/* custom */
+@import "helpers/fonts";
+@import "helpers/variables";
+@import "helpers/color_theme";
+/* bootstrap */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/*
+* Partials
+*/
+@import "helpers/mixins";
+@import "helpers/custom";
+
+/*
+* App
+*/
+@import "app/app";

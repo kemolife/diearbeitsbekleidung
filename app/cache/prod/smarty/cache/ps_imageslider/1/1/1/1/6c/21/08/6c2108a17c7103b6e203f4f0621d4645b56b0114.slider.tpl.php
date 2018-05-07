@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:964734055a9fbfad433e26-52551919%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:209395a9ff4c721a708-83714454%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,7 +9,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'module',
     ),
   ),
-  'nocache_hash' => '964734055a9fbfad433e26-52551919',
+  'nocache_hash' => '209395a9ff4c721a708-83714454',
   'variables' => 
   array (
     'homeslider' => 0,
@@ -17,16 +17,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a9fbfada96ac7_78650478',
+  'unifunc' => 'content_5a9ff4c75b2660_51852913',
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a9fbfada96ac7_78650478')) {function content_5a9fbfada96ac7_78650478($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5a9ff4c75b2660_51852913')) {function content_5a9ff4c75b2660_51852913($_smarty_tpl) {?>
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="5000" data-wrap="true" data-pause="hover">
     <ul class="carousel-inner" role="listbox">
               <li class="carousel-item active" role="option" aria-hidden="false">
           <a href="http://www.prestashop.com/?utm_source=back-office&amp;utm_medium=v17_homeslider&amp;utm_campaign=back-office-RU&amp;utm_content=download">
             <figure>
-              <img src="http://diearbeitsbekleidung.local/modules/ps_imageslider/images/sample-1.jpg" alt="sample-1">
+              <img src="http://localhost:8080/diearbeitsbekleidung/modules/ps_imageslider/images/sample-1.jpg" alt="sample-1">
                               <figcaption class="caption">
                   <h2 class="display-1 text-uppercase">Sample 1</h2>
                   <div class="caption-description"><h2>EXCEPTEUR OCCAECAT</h2>
@@ -38,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <li class="carousel-item " role="option" aria-hidden="true">
           <a href="http://www.prestashop.com/?utm_source=back-office&amp;utm_medium=v17_homeslider&amp;utm_campaign=back-office-RU&amp;utm_content=download">
             <figure>
-              <img src="http://diearbeitsbekleidung.local/modules/ps_imageslider/images/sample-2.jpg" alt="sample-2">
+              <img src="http://localhost:8080/diearbeitsbekleidung/modules/ps_imageslider/images/sample-2.jpg" alt="sample-2">
                               <figcaption class="caption">
                   <h2 class="display-1 text-uppercase">Sample 2</h2>
                   <div class="caption-description"><h2>EXCEPTEUR OCCAECAT</h2>
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <li class="carousel-item " role="option" aria-hidden="true">
           <a href="http://www.prestashop.com/?utm_source=back-office&amp;utm_medium=v17_homeslider&amp;utm_campaign=back-office-RU&amp;utm_content=download">
             <figure>
-              <img src="http://diearbeitsbekleidung.local/modules/ps_imageslider/images/sample-3.jpg" alt="sample-3">
+              <img src="http://localhost:8080/diearbeitsbekleidung/modules/ps_imageslider/images/sample-3.jpg" alt="sample-3">
                               <figcaption class="caption">
                   <h2 class="display-1 text-uppercase">Sample 3</h2>
                   <div class="caption-description"><h2>EXCEPTEUR OCCAECAT</h2>

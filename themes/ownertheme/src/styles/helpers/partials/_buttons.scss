@@ -1,0 +1,63 @@
+/*
+* Buttons
+*/
+button {
+    background: transparent;
+}
+
+.btn {
+    @extend .relative;
+    @include transition($dur:.15s, $tfunc:ease-in-out);
+	border: 2px solid transparent;
+    overflow: hidden;
+    background: transparent;
+	font-size: inherit;
+    text-align: center;
+	&-info,
+	&-primary,
+	&-1,
+	&-2 {
+		height: 30px;
+		font-family: $oswald-sb;
+		line-height: 1em;
+		.mdi {
+			@include font-size(20px);
+		}
+	}
+	&-post-more {
+		padding: 0;
+		width: 100%;
+		text-align: right;
+		color: $cl_theme-black;
+		text-decoration: underline;
+	}
+	&-primary,
+    &-1 {
+        border-color: $cl_brand;
+        background: $cl_brand;
+		color: white;
+        &:hover,
+        &:active,
+        &:focus {
+			border-color: $cl_brand;
+            background: white;
+            color: #000;
+        }
+    }
+    &-primary {
+		padding: 3px 0px 4px 4px;
+		@include font-size(14px);
+    }
+    &-1 {
+		padding: 3px 15px 5px;
+    }
+    &-2 {
+        border-color: #fff;
+        color: #fff;
+        &:hover,
+        &:focus {
+            background: #000;
+            color: #fff;
+        }
+    }
+}

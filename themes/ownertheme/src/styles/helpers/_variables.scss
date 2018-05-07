@@ -1,0 +1,41 @@
+
+// width & height
+$max-width: 1170px;
+
+// breakpoints
+$width-1600: 	1600px;
+$width-1920: 	1920px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+) !default;
+
+$grid-gutter-width: 20px !default;
+
+/* Path */
+$font:	"../fonts";
+$img:	"../img";
+$img-bg: "../img/bg";
+
+
+/* fonts */
+//@include font-face-1("fontello", "../fonts/fontello");
+@include font-face-1("FiraSans-Regular", "#{$font}/FiraSans-Regular");
+@include font-face-1("FiraSans-Medium", "#{$font}/FiraSans-Medium");
+@include font-face-1("Oswald-Regular", "#{$font}/Oswald-Regular");
+@include font-face-1("Oswald-SemiBold", "#{$font}/Oswald-SemiBold");
+
+
+$base-font-family:	"arial", sans-serif;
+$base-font-size: 16px;
+
+$fira-r:	'FiraSans-Regular';
+$fira-m:	'FiraSans-Medium';
+$oswald-r:	'Oswald-Regular';
+$oswald-sb: 'Oswald-SemiBold';
+
+
+$primary-font: $fira-r;

@@ -1,0 +1,21 @@
+input,
+textarea {
+    margin: 2px 0;
+    padding: 5px 10px;
+}
+
+select,
+select.form-control {
+	-moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+	&::after {
+		@include pseudo-elm($w:20px);
+		@include position($left:auto, $right:0);
+		background: black;
+	}
+}
+
+.form-control {
+	position: relative;
+}

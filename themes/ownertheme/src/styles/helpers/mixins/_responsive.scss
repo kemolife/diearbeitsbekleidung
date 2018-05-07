@@ -1,0 +1,72 @@
+/* responsive */
+
+/* mobile, phablet, tablet, laptop, desktop */
+@mixin media($breakpoint) {
+	/* mobile and lower size */
+    @if $breakpoint == mobile {
+        @media screen and (max-width: $width-1 - 1) { @content; }
+    }
+	/* mobile-l and lower size */
+    @else if $breakpoint == mobile-l-down {
+        @media screen and (max-width: $width-2 - 1) { @content; }
+    }
+	/* only mobile l size */
+    @else if $breakpoint == mobile-l {
+        @media screen and (min-width: $width-1) and (max-width: $width-2 - 1) { @content; }
+    }
+	/* mobile-l and upper size */
+    @else if $breakpoint == mobile-l-up {
+        @media screen and (min-width: $width-1) { @content; }
+    }
+	/* only phablet size */
+    @else if $breakpoint == phablet {
+        @media screen and (min-width: $width-2) and (max-width: $width-3 - 1) { @content; }
+    }
+	/* phablet upper size */
+    @else if $breakpoint == phablet-up {
+        @media screen and (min-width: $width-2) { @content; }
+    }
+	/* phablet lower size */
+    @else if $breakpoint == phablet-down {
+        @media screen and (max-width: $width-3 - 1) { @content; }
+    }
+	/* only tablet size */
+    @else if $breakpoint == tablet {
+        @media screen and (min-width: $width-3) and (max-width: $width-4 - 1) { @content; }
+    }
+	/* tablet upper size */
+    @else if $breakpoint == tablet-up {
+        @media screen and (min-width: $width-3) { @content; }
+    }
+	/* tablet lower size */
+    @else if $breakpoint == tablet-down {
+        @media screen and (max-width: $width-4 - 1) { @content; }
+    }
+	/* only laptop size */
+    @else if $breakpoint == laptop {
+        @media screen and (min-width: $width-4) and (max-width: $width-5 - 1) { @content; }
+    }
+	/* laptop upper size */
+    @else if $breakpoint == laptop-up {
+        @media screen and (min-width: $width-4) { @content; }
+    }
+	/* laptop lower size */
+    @else if $breakpoint == laptop-down {
+        @media screen and (max-width: $width-5 - 1) { @content; }
+    }
+	/* desktop upper size */
+    @else if $breakpoint == desktop-up {
+        @media screen and (min-width: $width-5) { @content; }
+    }
+	/* desktop-l upper size */
+    @else if $breakpoint == desktop-l-up {
+        @media screen and (min-width: $width-6) { @content; }
+    }
+    @else {
+        @media screen and (min-width: $breakpoint) { @content; }
+    }
+}
+
+@mixin media-between($s1, $s2) {
+    @media screen and (min-width: $s1) and (max-width: $s2) { @content; }
+}

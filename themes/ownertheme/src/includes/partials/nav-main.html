@@ -1,0 +1,105 @@
+<nav class="navbar">
+	<div class="container">
+		<!--<div class="row">-->
+			<div class="col-4 col-mob hidden__up--lg">
+				<button class="navbar-toggler" id="menuToggler" data-toggle="collapse" data-target="#mainMenu" aria-controls="navbarNav" aria-expanded="false" aria-expanded="false">
+					<span class="navbar-toggler-line"></span>
+					<span class="navbar-toggler-line"></span>
+					<span class="navbar-toggler-line"></span>
+				</button>
+			</div>
+			<div class="col-4 col-mob hidden__up--lg">
+				<figure class="header__logo">
+					<img src="img/logo-mob.png" alt="mobile logo">
+				</figure>
+			</div>
+			<div class="col-4 col-mob hidden__up--lg justify-content-end align-items-center">
+				@@include("account-btn-header.html")
+				@@include('cart-header.html')
+			</div>
+			<ul class="nav" id="mainMenu" role="menu" aria-labelledby="menuToggler">
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">Arbeitskleidung</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-1.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">SICHERHEITSSCHUHE</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-1.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">ARBEITSSCHUHE</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-1.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">ARBEITSHANDSCHUHE</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-1.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">ARBEITSKLEIDUNG MIT LOGO</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-2.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">BERUFE</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-2.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+				<li class="nav-item has-submenu" role="none">
+					<a href="" class="nav-link" role="menuitem">SALE</a>
+					<i class="mdi mdi-chevron-down"></i>
+					<div class="nav__submenu">
+						<div class="container">
+							<div class="row align-items-center">
+								@@include('nav-submenu-3.html')
+							</div>
+						</div><!-- .container -->
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="header__search--toggler">
+				<i class="mdi mdi-magnify" aria-hidden="true"></i>
+			</button>
+			@@include('header-search.html')
+		<!--</div>-->
+	</div>
+</nav>
