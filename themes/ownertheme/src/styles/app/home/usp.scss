@@ -1,9 +1,14 @@
 .section__usp {
 	.section__back {
-		background-image: url("#{$img-bg}/bg-usp.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		.webp & {
+			background-image: url("#{$img-bg}/bg-usp.webp");
+		}
+		.no-webp & {
+			background-image: url("#{$img-bg}/bg-usp.jpg");
+		}
 	}
 	.section__front {
 		

@@ -1,10 +1,15 @@
 .section__search {
 	z-index: 99;
 	.section__back {
-		background-image: url("#{$img-bg}/bg-seo.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		.webp & {
+			background-image: url("#{$img-bg}/bg-seo.webp");
+		}
+		.no-webp & {
+			background-image: url("#{$img-bg}/bg-seo.jpg");
+		}
 	}
 	.section__front {
 		@include media-breakpoint-up(xl) {

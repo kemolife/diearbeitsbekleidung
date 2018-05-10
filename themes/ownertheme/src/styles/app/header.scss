@@ -66,6 +66,20 @@
 		}
 	}
 	&__account,
+	&__language,
+	&__cart {
+		.dropdown-menu::after {
+			@include pseudo-elm($w:20px, $h:20px);
+			position: absolute;
+			top: -10px;
+			left: auto;
+			transform: rotate(45deg);
+			border-top: 1px solid rgba($cl_theme-black, .15);
+			border-left: 1px solid rgba($cl_theme-black, .15);
+			background-color: white;
+		}
+	}
+	&__account,
 	&__cart {
 		.dropdown-toggle::after {
 			display: none;
@@ -91,6 +105,14 @@
 	&__account {
 		.dropdown-menu {
 			width: 215px;
+			&::after {
+				@include media-breakpoint-down(md) {
+					right: 10px;
+				}
+				@include media-breakpoint-up(lg) {
+					right: 54px;
+				}
+			}
 		}
 		span {
 			@include media-breakpoint-down(md) {
@@ -105,6 +127,9 @@
 	&__language {
 		.btn {
 			padding-right: 0;
+		}
+		.dropdown-menu::after {
+			left: 21px;
 		}
 	}
 	&__contacts {
@@ -207,6 +232,14 @@
 			}
 			@include media-breakpoint-up(sm) {
 				width: 390px;
+			}
+			&::after {
+				@include media-breakpoint-down(md) {
+					right: 10px;
+				}
+				@include media-breakpoint-up(lg) {
+					right: 10%;
+				}
 			}
 		}
 		&--total {
