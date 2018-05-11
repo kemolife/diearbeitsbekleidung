@@ -28,7 +28,7 @@ const gulp        	= require('gulp'),
 	cache         	= require('gulp-cache'),
 	rename        	= require('gulp-rename'),
 	del           	= require('del'),
-	production 		= false;
+	production 		= true;
 
 let src     = './src',
     dist    = './assets',

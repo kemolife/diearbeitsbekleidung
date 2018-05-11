@@ -95,8 +95,8 @@
 			width: 44px;
 			height: 23px;
 			overflow: hidden;
-			background-repeat: no-repeat;
-			background-image: url("../img/payment-delivery.png");
+			/*background-repeat: no-repeat;
+			background-image: url("../img/payment-delivery.png");*/
 		}
 		.payment {
 			background-size: 300%;
@@ -120,28 +120,40 @@
 				background: white;
 			}
 		}
+		figure {
+			position: relative;
+			margin-bottom: 0;
+			margin-right: .125rem;
+			border-radius: 4px;
+		}
+		img {
+			@include size(140px, auto);
+			position: absolute;
+		}
 	}
-	&__payment {
-		.payment1 {
-			background-position: 0 93%;
-		}
-		.payment2 {
-			background-position: 49% 93%;
-		}
-		.payment3 {
-			background-position: 98% 93%;
-		}
+	.payment img {
+		top: -155%;
 	}
-	&__delivery {
-		.delivery1 {
-			background-position: 1% 4%;
-		}
-		.delivery2 {
-			background-position: 49% 4%;
-		}
-		.delivery3 {
-			background-position: 97% 4%;
-		}
+	.payment-1 img {
+		left: -4.5%;
+	}
+	.payment-2 img {
+		left: -107.5%;
+	}
+	.payment-3 img {
+		left: -211%;
+	}
+	.delivery img {
+		top: -11%;
+	}
+	.delivery-1 img {
+		left: -4.5%;
+	}
+	.delivery-2 img {
+		left: -107%;
+	}
+	.delivery-3 img {
+		left: -210%;
 	}
 	&__contacts {
 		padding-top: .75rem;

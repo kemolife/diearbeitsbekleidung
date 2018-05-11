@@ -63,17 +63,37 @@
 						<div class="col-6 col-lg-12 footer__payment">
 							<div class="h6">Zahlung</div>
 							<div class="d-flex">
-								<div class="payment payment1"></div>
-								<div class="payment payment2"></div>
-								<div class="payment payment3"></div>
+							@@loop("partials/footer-delivery-payment.html", [{
+								"itemClass": "payment",
+								"itemNum": "1",
+								"itemImg": "payment-delivery.png"
+							},{
+								"itemClass": "payment",
+								"itemNum": "2",
+								"itemImg": "payment-delivery.png"
+							},{
+								"itemClass": "payment",
+								"itemNum": "3",
+								"itemImg": "payment-delivery.png"
+							}])
 							</div>
 						</div>
 						<div class="col-6 col-lg-12 footer__delivery">
 							<div class="h6">Versandinfo</div>
 							<div class="d-flex">
-								<div class="delivery delivery1"></div>
-								<div class="delivery delivery2"></div>
-								<div class="delivery delivery3"></div>
+							@@loop("partials/footer-delivery-payment.html", [{
+								"itemClass": "delivery",
+								"itemNum": "1",
+								"itemImg": "payment-delivery.png"
+							},{
+								"itemClass": "delivery",
+								"itemNum": "2",
+								"itemImg": "payment-delivery.png"
+							},{
+								"itemClass": "delivery",
+								"itemNum": "3",
+								"itemImg": "payment-delivery.png"
+							}])
 							</div>
 						</div>
 					</div>

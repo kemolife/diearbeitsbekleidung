@@ -35,6 +35,8 @@ const slick = require('slick-carousel-browserify');
 			}
 		},
 		header	: {
+			bottom		: '.header__bottom',
+			addSticky	: 'sticky',
 			lang		: {
 				btn		: '.header__language .dropdown-toggle',
 				link	: '.header__language .dropdown-menu a',
@@ -45,16 +47,14 @@ const slick = require('slick-carousel-browserify');
 				field	: '.header__search'
 			}
 		},
-		// home beruf
-		berufList			: '.section__beruf--list',
-		/*homeCategories		: '.section__top-categories--list',*/
-		//
-		introSlider			: '.intro__slider'
-		//
-		/*homeTopSales		: '.section__product--mobile .tab-pane',*/
-		// desk header search
-		/*headerSearchBtn		: '.header__search--toggler',
-		headerSearchField	: '.header__search'*/
+		section	: {
+			beruf		: {
+				list	: '.section__beruf--list'
+			},
+			intro		: {
+				slider	: '.intro__slider'
+			}
+		}
 	};
 	
 	/* mobile menu */
@@ -77,6 +77,20 @@ const slick = require('slick-carousel-browserify');
 			$(this).closest(app.nav.submenu.parent).toggleClass('show').siblings().removeClass('show');
 		}
 	});
+	
+	// mobile header sticky on scroll up
+	if(window.innerWidth < 992) {
+		let lastScrollTop = 0;
+		$(window).scroll(function(event){
+			let st = $(this).scrollTop();
+			if (st > lastScrollTop){
+				$(app.header.bottom).removeClass(app.header.addSticky);
+			} else {
+				$(app.header.bottom).addClass(app.header.addSticky);
+			}
+			lastScrollTop = st;
+		});
+	}
 	
 	// header lang select
 	if($(app.header.lang.btn).siblings('.dropdown-menu').find('.selected').length) {
@@ -108,8 +122,8 @@ const slick = require('slick-carousel-browserify');
 	});
 	
 	// intro slider
-	if($(app.introSlider.length)) {
-		slick($(app.introSlider), {
+	if($(app.section.intro.slider.length)) {
+		slick($(app.section.intro.slider), {
 			slidesToShow: 1,
 			dots: true,
 			arrows: false,
@@ -167,8 +181,8 @@ const slick = require('slick-carousel-browserify');
 	
 	// beruf categories desktop slider
 	if(window.innerWidth > 1199) {
-		if($(app.berufList.length)) {
-			slick($(app.berufList), {
+		if($(app.section.beruf.list.length)) {
+			slick($(app.section.beruf.list), {
 				variableWidth: true,
 				slidesToShow: 3
 			});

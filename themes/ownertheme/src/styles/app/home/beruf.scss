@@ -10,6 +10,12 @@
 			background-repeat: no-repeat;
 			background-size: auto;
 			background-image: url("#{$img-bg}/bg-beruf-mob.jpg");
+			/*.webp & {
+				background-image: url("#{$img-bg}/bg-beruf-mob.webp");
+			}
+			.no-webp & {
+				background-image: url("#{$img-bg}/bg-beruf-mob.jpg");
+			}*/
 		}
 	}
 	&--list {

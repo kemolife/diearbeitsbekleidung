@@ -15,6 +15,8 @@
 	<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/fav/favicon.ico">
 	<meta name="theme-color" content="#ff6600">
+	<link rel="preload" href="css/main.min.css" as="style">
+	<link rel="preload" href="js/vendor.min.js" as="script">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
@@ -40,11 +42,25 @@
     							</nav>
     						</div>
     						<div class="col-3 col-lg-2 col-xl-2">
-    							<div class="header__account">
-	<button class="header__account--btn">
+    							<div class="header__account dropdown">
+	<button class="header__account--btn dropdown-toggle" type="button" id="dropAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="mdi mdi-account" aria-hidden="true"></i>
 		<span>Anmeldung</span>
 	</button>
+	<form class="dropdown-menu dropdown-menu-right">
+		<div class="form-group">
+			<label for="enterAccountMail">Email address</label>
+			<input type="email" class="form-control" id="enterAccountMail" placeholder="email@example.com">
+		</div>
+		<div class="form-group">
+			<label for="enterAccountPassword">Password</label>
+			<input type="password" class="form-control" id="enterAccountPassword" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-block btn-1">
+			<span>Sign in</span>
+			<i class="mdi mdi-login" aria-hidden="true"></i>
+		</button>
+	</form>
 </div>
     						</div>
     						<div class="col-2 col-xl-1">
@@ -77,12 +93,128 @@
     							</div>
     						</div>
     						<div class="col-lg-4 text-right">
-    						<div class="header__cart not-empty">
-	<button class="header__cart--btn">
+    						<div class="header__cart dropdown not-empty">
+	<button class="dropdown-toggle header__cart--btn" type="button" id="dropCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="header__cart--title">Warenkorb</span>
 		<i class="mdi mdi-cart" aria-hidden="true"></i>
 		<span class="badge badge-light">2</span>
 	</button>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="header__cart--list">
+			<div class="header__cart--item cart__product row">
+	<figure class="cart__product--image col-3">
+		<img src="img/product/prod-6-1.jpg" alt="Arbeitsjacke Berlin">
+	</figure>
+	<div class="cart__product--body col-9 row">
+		<a href="" class="cart__product--title h4 col-10">
+			<span>Arbeitsjacke Berlin</span>
+		</a>
+		<div class="cart__product--remove col-2">
+			<button type="button" class="btn btn-default">
+				<i class="mdi mdi-close" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="cart__product--color col-2">
+			<span class="cart__product--param">Farbe</span>
+			<span class="product__color--item color-blue square"></span>
+		</div>
+		<div class="cart__product--size col-2">
+			<span class="cart__product--param">Größe</span>
+			<span class="product__size--item square">s</span>
+		</div>
+		<div class="cart__product--count col-2">
+			<span class="cart__product--param">Anzahl</span>
+			<span class="square">1</span>
+		</div>
+		<div class="cart__product--price price col-6 text-right">
+			<div class="price-old">
+				<span class="price-part1">38.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+			<div class="price-default">
+				<span class="price-part1">28.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+		</div>
+	</div>
+</div><div class="header__cart--item cart__product row">
+	<figure class="cart__product--image col-3">
+		<img src="img/product/prod-1-1.jpg" alt="Kochjacke langarm mit verdeckten Druckknöpfen">
+	</figure>
+	<div class="cart__product--body col-9 row">
+		<a href="" class="cart__product--title h4 col-10">
+			<span>Kochjacke langarm mit verdeckten Druckknöpfen</span>
+		</a>
+		<div class="cart__product--remove col-2">
+			<button type="button" class="btn btn-default">
+				<i class="mdi mdi-close" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="cart__product--color col-2">
+			<span class="cart__product--param">Farbe</span>
+			<span class="product__color--item color-red square"></span>
+		</div>
+		<div class="cart__product--size col-2">
+			<span class="cart__product--param">Größe</span>
+			<span class="product__size--item square">s</span>
+		</div>
+		<div class="cart__product--count col-2">
+			<span class="cart__product--param">Anzahl</span>
+			<span class="square">1</span>
+		</div>
+		<div class="cart__product--price price col-6 text-right">
+			<div class="price-old">
+				<span class="price-part1">38.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+			<div class="price-default">
+				<span class="price-part1">28.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+		<div class="header__cart--total">
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>MwSt.</span>
+				</div>
+				<div class="col-4 price">
+					<div class="price-default">
+						<span class="price-part1">5.</span>
+						<sup class="price-part2">80</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>Gesamt</span>
+				</div>
+				<div class="col-4">
+					<div class="price-default">
+						<span class="price-part1">63.</span>
+						<sup class="price-part2">78</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-12">
+					<small>Preise inkl. MwSt.</small>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-block btn-1" type="button">
+	<span>Zur kasse</span>
+	<i class="mdi mdi-cart" aria-hidden="true"></i>
+</button>
+	</div>
 </div><!-- add class .not-empty when user choose product -->
     						</div>
     					</div>
@@ -107,18 +239,148 @@
 				</figure>
 			</div>
 			<div class="col-4 col-mob hidden__up--lg justify-content-end align-items-center">
-				<div class="header__account">
-	<button class="header__account--btn">
+				<div class="header__account dropdown">
+	<button class="header__account--btn dropdown-toggle" type="button" id="dropAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="mdi mdi-account" aria-hidden="true"></i>
 		<span>Anmeldung</span>
 	</button>
+	<form class="dropdown-menu dropdown-menu-right">
+		<div class="form-group">
+			<label for="enterAccountMail">Email address</label>
+			<input type="email" class="form-control" id="enterAccountMail" placeholder="email@example.com">
+		</div>
+		<div class="form-group">
+			<label for="enterAccountPassword">Password</label>
+			<input type="password" class="form-control" id="enterAccountPassword" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-block btn-1">
+			<span>Sign in</span>
+			<i class="mdi mdi-login" aria-hidden="true"></i>
+		</button>
+	</form>
 </div>
-				<div class="header__cart not-empty">
-	<button class="header__cart--btn">
+				<div class="header__cart dropdown not-empty">
+	<button class="dropdown-toggle header__cart--btn" type="button" id="dropCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="header__cart--title">Warenkorb</span>
 		<i class="mdi mdi-cart" aria-hidden="true"></i>
 		<span class="badge badge-light">2</span>
 	</button>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="header__cart--list">
+			<div class="header__cart--item cart__product row">
+	<figure class="cart__product--image col-3">
+		<img src="img/product/prod-6-1.jpg" alt="Arbeitsjacke Berlin">
+	</figure>
+	<div class="cart__product--body col-9 row">
+		<a href="" class="cart__product--title h4 col-10">
+			<span>Arbeitsjacke Berlin</span>
+		</a>
+		<div class="cart__product--remove col-2">
+			<button type="button" class="btn btn-default">
+				<i class="mdi mdi-close" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="cart__product--color col-2">
+			<span class="cart__product--param">Farbe</span>
+			<span class="product__color--item color-blue square"></span>
+		</div>
+		<div class="cart__product--size col-2">
+			<span class="cart__product--param">Größe</span>
+			<span class="product__size--item square">s</span>
+		</div>
+		<div class="cart__product--count col-2">
+			<span class="cart__product--param">Anzahl</span>
+			<span class="square">1</span>
+		</div>
+		<div class="cart__product--price price col-6 text-right">
+			<div class="price-old">
+				<span class="price-part1">38.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+			<div class="price-default">
+				<span class="price-part1">28.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+		</div>
+	</div>
+</div><div class="header__cart--item cart__product row">
+	<figure class="cart__product--image col-3">
+		<img src="img/product/prod-1-1.jpg" alt="Kochjacke langarm mit verdeckten Druckknöpfen">
+	</figure>
+	<div class="cart__product--body col-9 row">
+		<a href="" class="cart__product--title h4 col-10">
+			<span>Kochjacke langarm mit verdeckten Druckknöpfen</span>
+		</a>
+		<div class="cart__product--remove col-2">
+			<button type="button" class="btn btn-default">
+				<i class="mdi mdi-close" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="cart__product--color col-2">
+			<span class="cart__product--param">Farbe</span>
+			<span class="product__color--item color-red square"></span>
+		</div>
+		<div class="cart__product--size col-2">
+			<span class="cart__product--param">Größe</span>
+			<span class="product__size--item square">s</span>
+		</div>
+		<div class="cart__product--count col-2">
+			<span class="cart__product--param">Anzahl</span>
+			<span class="square">1</span>
+		</div>
+		<div class="cart__product--price price col-6 text-right">
+			<div class="price-old">
+				<span class="price-part1">38.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+			<div class="price-default">
+				<span class="price-part1">28.</span>
+				<sup class="price-part2">99</sup>
+				<span class="price-currency">&#8364;</span>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+		<div class="header__cart--total">
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>MwSt.</span>
+				</div>
+				<div class="col-4 price">
+					<div class="price-default">
+						<span class="price-part1">5.</span>
+						<sup class="price-part2">80</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-8 h6">
+					<span>Gesamt</span>
+				</div>
+				<div class="col-4">
+					<div class="price-default">
+						<span class="price-part1">63.</span>
+						<sup class="price-part2">78</sup>
+						<span class="price-currency">&#8364;</span>
+					</div>
+				</div>
+			</div>
+			<div class="row text-right">
+				<div class="col-12">
+					<small>Preise inkl. MwSt.</small>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-block btn-1" type="button">
+	<span>Zur kasse</span>
+	<i class="mdi mdi-cart" aria-hidden="true"></i>
+</button>
+	</div>
 </div><!-- add class .not-empty when user choose product -->
 			</div>
 			<ul class="nav" id="mainMenu" role="menu" aria-labelledby="menuToggler">
@@ -511,9 +773,9 @@
 									<span class="dropdown-title">Alles</span>
 									<i class="mdi mdi-chevron-down"></i>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="homeSearch1">
-								<li class="dropdown-item selected" tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="true">Alles</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">herren</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">damen</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">kinder</a></li>
-								</ul>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch1">
+								<a href="" class="dropdown-item selected" tabindex="0" role="option" aria-disabled="false" aria-selected="true">Alles</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">herren</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">damen</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">kinder</a>
+								</div>
 							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
@@ -522,9 +784,9 @@
 									<span class="dropdown-title">Typ</span>
 									<i class="mdi mdi-chevron-down"></i>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="homeSearch2">
-								<li class="dropdown-item selected" tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="true">Typ</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">typ2</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">typ3</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">typ4</a></li>
-								</ul>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch2">
+								<a href="" class="dropdown-item selected" tabindex="0" role="option" aria-disabled="false" aria-selected="true">Typ</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">typ2</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">typ3</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">typ4</a>
+								</div>
 							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
@@ -533,9 +795,9 @@
 									<span class="dropdown-title">Marke</span>
 									<i class="mdi mdi-chevron-down"></i>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="homeSearch3">
-								<li class="dropdown-item selected" tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="true">Marke</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">marke2</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">marke3</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">marke4</a></li>
-								</ul>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch3">
+								<a href="" class="dropdown-item selected" tabindex="0" role="option" aria-disabled="false" aria-selected="true">Marke</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">marke2</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">marke3</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">marke4</a>
+								</div>
 							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
@@ -544,9 +806,9 @@
 									<span class="dropdown-title">farbe</span>
 									<i class="mdi mdi-chevron-down"></i>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="homeSearch4">
-								<li class="dropdown-item selected" tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="true">farbe</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">farbe2</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">farbe3</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">farbe4</a></li>
-								</ul>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch4">
+								<a href="" class="dropdown-item selected" tabindex="0" role="option" aria-disabled="false" aria-selected="true">farbe</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">farbe2</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">farbe3</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">farbe4</a>
+								</div>
 							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
@@ -555,9 +817,9 @@
 									<span class="dropdown-title">Größe</span>
 									<i class="mdi mdi-chevron-down"></i>
 								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="homeSearch5">
-								<li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="true">s</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">m</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">l</a></li><li class="dropdown-item " tabindex="0" role="presentation"><a href="" role="option" aria-disabled="false" aria-selected="false">xl</a></li>
-								</ul>
+								<div class="dropdown-menu" role="menu" aria-labelledby="homeSearch5">
+								<a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="true">s</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">m</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">l</a><a href="" class="dropdown-item " tabindex="0" role="option" aria-disabled="false" aria-selected="false">xl</a>
+								</div>
 							</div>
     					</div>
     					<div class="col-6 col-md-4 col-xl-2">
@@ -597,16 +859,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -657,16 +919,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -717,16 +979,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -777,16 +1039,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -842,16 +1104,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -902,16 +1164,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -962,16 +1224,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1022,16 +1284,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1087,16 +1349,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1147,16 +1409,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1207,16 +1469,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1267,16 +1529,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1335,16 +1597,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Arbeitshose Berlin Pro Bundhose Arbeitshose Berlin Pro Bundhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1398,16 +1660,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1458,16 +1720,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1518,16 +1780,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1578,16 +1840,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1645,16 +1907,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Arbeitshose Berlin Pro Bundhose Arbeitshose Berlin Pro Bundhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1708,16 +1970,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1768,16 +2030,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1828,16 +2090,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1888,16 +2150,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -1955,16 +2217,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Arbeitshose Berlin Pro Bundhose Arbeitshose Berlin Pro Bundhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -2018,16 +2280,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-1">Malerhose Malerhose Malerhose Malerhose Malerhose</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -2078,16 +2340,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-2">Arbeitsjacke Berlin</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -2138,16 +2400,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Crew Neck Sweatshirt - WUI20</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -2198,16 +2460,16 @@
 					<h5 class="card-title"><a href="single-product.html" rel="nofollow" title="product-3">Damen Arztkittel Medizin weiß</a></h5>
 				</div>
 				<div class="col-sm-5">
-					<div class="card-price d-flex align-items-end">
-						<div class="card-price-old">
-							<span class="card-price-whole">38.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+					<div class="card-price price d-flex align-items-end">
+						<div class="price-old">
+							<span class="price-part1">38.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
-						<div class="card-price-default">
-							<span class="card-price-whole">28.</span>
-							<sup class="card-price-fraction">99</sup>
-							<span class="card-price-currency">&#8364;</span>
+						<div class="price-default">
+							<span class="price-part1">28.</span>
+							<sup class="price-part2">99</sup>
+							<span class="price-currency">&#8364;</span>
 						</div>
 					</div>
 				</div>
@@ -2566,17 +2828,25 @@
 						<div class="col-6 col-lg-12 footer__payment">
 							<div class="h6">Zahlung</div>
 							<div class="d-flex">
-								<div class="payment payment1"></div>
-								<div class="payment payment2"></div>
-								<div class="payment payment3"></div>
+							<figure class="payment payment-1">
+	<img src="img/payment-delivery.png" alt="payment-1">
+</figure><figure class="payment payment-2">
+	<img src="img/payment-delivery.png" alt="payment-2">
+</figure><figure class="payment payment-3">
+	<img src="img/payment-delivery.png" alt="payment-3">
+</figure>
 							</div>
 						</div>
 						<div class="col-6 col-lg-12 footer__delivery">
 							<div class="h6">Versandinfo</div>
 							<div class="d-flex">
-								<div class="delivery delivery1"></div>
-								<div class="delivery delivery2"></div>
-								<div class="delivery delivery3"></div>
+							<figure class="delivery delivery-1">
+	<img src="img/payment-delivery.png" alt="delivery-1">
+</figure><figure class="delivery delivery-2">
+	<img src="img/payment-delivery.png" alt="delivery-2">
+</figure><figure class="delivery delivery-3">
+	<img src="img/payment-delivery.png" alt="delivery-3">
+</figure>
 							</div>
 						</div>
 					</div>
