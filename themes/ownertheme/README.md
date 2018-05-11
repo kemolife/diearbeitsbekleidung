@@ -1,10 +1,19 @@
 # diearbeitsbekleidung online store
 
-used plugins:
+used libs:
 * jquery 3
 * bootstrap 4
-* material design icons
-* slick carousel
 ---
-* animate.css
-* wow.js
+used plugins:
+* slick-carousel-browserify 1.6.12
+* modernizr-custom
+---
+fonts:
+* FiraSans-Regular
+* FiraSans-Medium
+* Oswald-Regular
+* Oswald-SemiBold
+---
+Icons
+* material design icons
+---

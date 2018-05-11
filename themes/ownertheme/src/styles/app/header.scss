@@ -4,6 +4,9 @@
 	
 	position: relative;
 	z-index: $zindex-dropdown;
+	@include media-breakpoint-down(md) {
+		height: $desknav-h * 2;
+	}
 	&__mobile {}
 	&__desktop {}
 	&__top {
@@ -25,10 +28,19 @@
 		}
 	}
 	&__bottom {
+		@include transition($dur:.25s);
 		@include media-breakpoint-down(md) {
 			position: -webkit-sticky;
 			position: sticky;
 			top: 0;
+			background-color: white;
+		}
+		&.sticky {
+			width: 100%;
+			box-shadow: $box-shadow;
+			@include media-breakpoint-down(md) {
+				position: fixed;
+			}
 		}
 		&::after {
 			@include pseudo-elm($h:1px);
